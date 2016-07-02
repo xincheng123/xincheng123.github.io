@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>以init加载视图方法总结 | 半墨雨萧年</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="以init加载视图方法总结 | 半墨雨萧年">
+    <meta name="twitter:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="以init加载视图方法总结 | 半墨雨萧年">
+    <meta property="og:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    
+    <meta name="author" content="赵新成">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/favicon.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="半墨雨萧年" href="/atom.xml">
+    
+
+    <link rel="canonical" href="http://xingcheng123.tk/2016/07/02/initwithcoder和initwithframe的区别精解/"/>
+
+    
+    <link rel="author" href="https://www.google.com/+LenboMa"/>
+    
+</head>
+
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 半墨雨萧年 的主页"><img src="/images/logo2.jpg" width="80" alt="半墨雨萧年 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 半墨雨萧年">半墨雨萧年</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">以梦为马，莫负韶华！</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">嗨，我是赵新成，一名来自中国的 iOS 开发者。现居北京。正在修行，探求创意之源。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/projects">项目作品</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/u/3820143749" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/xincheng123" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+  <li class="navigation__item">
+    <a href="https://www.google.com/+LenboMa" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google+</span>
+    </a>
+  </li>
+
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-green"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-07-02T10:15:00.000Z" class="post-list__meta--date date">2016-07-02</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">以init加载视图方法总结</h1>
+  </header>
+
+  <section class="post">
+    <h2 id="一-initWithCoder和initWithFrame的区别精解"><a href="#一-initWithCoder和initWithFrame的区别精解" class="headerlink" title="一:initWithCoder和initWithFrame的区别精解"></a>一:initWithCoder和initWithFrame的区别精解</h2><p><em>从nib/story中加载对象实例时，init：或initWithFrame：都不会调用。而是调用initWithCoder:</em></p>
+<h4 id="1-initWithFrame方法是什么？"><a href="#1-initWithFrame方法是什么？" class="headerlink" title="1. initWithFrame方法是什么？"></a>1. initWithFrame方法是什么？</h4><p>initWithFrame方法用来初始化并返回一个新的视图对象,根据指定的CGRect（尺寸）。<br>当然，其他UI对象，也有initWithFrame方法，但是，我们以UIView为例，来搞清楚initWithFrame方法。</p>
+<h4 id="2-什么时候用initWithFrame方法？"><a href="#2-什么时候用initWithFrame方法？" class="headerlink" title="2.什么时候用initWithFrame方法？"></a>2.什么时候用initWithFrame方法？</h4><p>简单的说，我们用编程方式申明，创建UIView对象时，使用initWithFrame方法。<br>在此，我们必须搞清楚，以下两种方式(存代码/Xib)来进行初始化UIView。</p>
+<h5 id="1-gt-使用存代码方式。"><a href="#1-gt-使用存代码方式。" class="headerlink" title="1&gt;使用存代码方式。"></a>1&gt;使用存代码方式。</h5><p>就是我们声明一个UIView的子类，进行“手工”编写代码的方式。<br>实际编程中，我们使用编程方式下，来创建一个UIView或者创建UIView的子类。这时候，将调用initWithFrame方法，来实例化UIView。<br>特别注意，如果在子类中重载initWithFrame方法，必须先调用父类的initWithFrame方法。在对自定义的UIView子类进行初始化操作。<br>比如：</p>
+<pre><code>- (id)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];// 先调用父类的initWithFrame方法
+    if (self) {
+    // 再自定义该类（UIView子类）的初始化操作。
+     _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+     [_scrollView setFrame:CGRectMake(0, 0, 320, 480)];
+      _scrollView.contentSize = CGSizeMake(320*3, 480);
+      [self addSubview:_scrollView];
+      }
+      return self;
+      }
+</code></pre><h4 id="3-initWithCoder方法是什么"><a href="#3-initWithCoder方法是什么" class="headerlink" title="3.initWithCoder方法是什么?"></a>3.initWithCoder方法是什么?</h4><h5 id="2-gt-使用-Interface-Builder-也就是xib-story方式-方式。"><a href="#2-gt-使用-Interface-Builder-也就是xib-story方式-方式。" class="headerlink" title="2&gt;使用 Interface Builder(也就是xib/story方式) 方式。"></a>2&gt;使用 Interface Builder(也就是xib/story方式) 方式。</h5><p>这种方式，就是使用nib文件。通常我们说的“拖控件” 的方式。<br>实际编程中，我们如果用Interface Builder 方式创建了UIView对象。（也就是，用拖控件的方式）<br>那么，initWithFrame方法方法是不会被调用的。因为nib文件已经知道如何初始化该View。（因为，我们在拖该view的时候，就定义好了长、宽、背景等属性）。<br>这时候，会调用initWithCoder方法，我们可以用initWithCoder方法来重新定义我们在nib中已经设置的各项属性。<br>这就是为什么使用initWithCoder：的原因，因为BIDViewController.xib的view是BIDQuartzFunView类型，而不是UIView类型了，所以其实是从nib中加载对象实例。</p>
+<h4 id="4-initWithCoder方法什么时候调用"><a href="#4-initWithCoder方法什么时候调用" class="headerlink" title="4.initWithCoder方法什么时候调用?"></a>4.initWithCoder方法什么时候调用?</h4><p> 是一个类在IB中创建但在xocde中被实例化时被调用的.比如,通过IB创建一个controller的nib文件,然后在xcode中通过 initWithNibName来实例化这个controller,那么这个controller的initWithCoder会被调用.或者是一个view的nib文件，类似方法创建时调用initWithCoder </p>
+<h4 id="5-initWithNibName方法的作用"><a href="#5-initWithNibName方法的作用" class="headerlink" title="5.initWithNibName方法的作用"></a>5.initWithNibName方法的作用</h4><p>这个方法是在controller的类在xib中创建,但是通过Xcode代码实例化controller的视图时候用的. </p>
+<h4 id="6-awakeFromNib方法的作用"><a href="#6-awakeFromNib方法的作用" class="headerlink" title="6.awakeFromNib方法的作用"></a>6.awakeFromNib方法的作用</h4><p>当.nib文件被加载的时候，会发送一个awakeFromNib的消息到.nib文件中的每个对象，每个对象都可以定义自己的awakeFromNib函数来响应这个消息，执行一些必要的操作。也就是说通过nib文件创建view对象时执行awakeFromNib</p>
+<h2 id="二-关于-initWithNibName-和-loadNibNamed-的区别和联系"><a href="#二-关于-initWithNibName-和-loadNibNamed-的区别和联系" class="headerlink" title="二:关于 initWithNibName 和 loadNibNamed 的区别和联系"></a>二:关于 initWithNibName 和 loadNibNamed 的区别和联系</h2><p>关于 initWithNibName 和 loadNibNamed 的区别和联系。之所以要把这两者来一起讲，我觉的我也有点困惑，到底用那种？其实真正搞清楚了他们之间的差别，就不会这么迷惘了。因为这两个方法，根本就不是一路货色。<br>既然，是要说明这2个方法，那就着重将区别吧。<br>但是第一步，还是要罗嗦一下，他们的联系：可以使用此方法加载用户界面（xib文件）到我们的代码中，这样，可以通过操作这个加载进来的（xib）对象，来操作xib文件内容。<br>下面进入主题，谈区别： </p>
+<h5 id="1-ShowViewController的initWithNibName方法"><a href="#1-ShowViewController的initWithNibName方法" class="headerlink" title="1.ShowViewController的initWithNibName方法"></a>1.ShowViewController的initWithNibName方法</h5><pre><code>ShowViewController * showMessage = [[ShowViewController alloc] 
+initWithNibName:@&quot;ShowViewController&quot; bundle:nil]; 
+
+self.showViewController = showMessage; 
+
+[showMessage release]; 
+</code></pre><h5 id="2-VideoCellController的loadNibNamed方法"><a href="#2-VideoCellController的loadNibNamed方法" class="headerlink" title="2.VideoCellController的loadNibNamed方法"></a>2.VideoCellController的loadNibNamed方法</h5><pre><code>NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@&quot;Save3ViewController&quot; 
+owner:self options:nil] ; 
+</code></pre><h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>只看他们初始化，那可能感觉是一样的。但是如果，打开分别看xib的关系的时候，才恍然大悟，原来他们的集成类都不一样。 </p>
+<ol>
+<li>initWithNibName要加载的xib的类为我们定义的视图控制器类 </li>
+<li>加载方式不同 initWithNibName方法：是延迟加载，这个View上的控件是 nil 的，只有到 需要显示时，才会不是 nil loadNibNamed方法：即时加载，用该方法加载的xib对象中的各个元素都已经存在。 </li>
+</ol>
+<h2 id="三-initWithCoder和initWithFrame的区别"><a href="#三-initWithCoder和initWithFrame的区别" class="headerlink" title="三:initWithCoder和initWithFrame的区别"></a>三:initWithCoder和initWithFrame的区别</h2><p>#####nitWithoder 是当从nib文件中加载对象的时候会调用，比如你的view来自nib那么就会调用这个view的这个函数。(由框架调用) initWithFrame (是由用户调用，来初始化对象的)<br>    self.showViewController = [nib lastObject]; </p>
+<pre><code>[nib objectAtIndex:0];
+</code></pre><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>1.initWithCoder: 对于.xib，当你嵌入一个视图对象到xib，视图加载时默认调用的是该方法；例如：假如创建的view来自nib，那么将会调用initWithCoder，由系统来调用，自己不能调用。</p>
+<p>2.initWithFrame: 非.xib的手动编码，视图加载时默认调用的是该方法。是由自己调用，来初始化对象的</p>
+
+  </section>
+
+</article>
+
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@Longbo Ma</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
+</footer>
+
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-42596364-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
