@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>SQLite操作之FMDB | 半墨雨萧年</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SQLite操作之FMDB | 半墨雨萧年">
+    <meta name="twitter:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SQLite操作之FMDB | 半墨雨萧年">
+    <meta property="og:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    
+    <meta name="author" content="赵新成">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/favicon.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="半墨雨萧年" href="/atom.xml">
+    
+
+    <link rel="canonical" href="http://xingcheng123.tk/2016/07/09/SQLite操作之FMDB/"/>
+
+    
+    <link rel="author" href="https://www.google.com/+LenboMa"/>
+    
+</head>
+
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 半墨雨萧年 的主页"><img src="/images/logo2.jpg" width="80" alt="半墨雨萧年 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 半墨雨萧年">半墨雨萧年</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">以梦为马，莫负韶华！</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">嗨，我是赵新成，一名来自中国的 iOS 开发者。现居北京。正在修行，探求创意之源。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/projects">项目作品</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/u/3820143749" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/xincheng123" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+  <li class="navigation__item">
+    <a href="https://www.google.com/+LenboMa" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google+</span>
+    </a>
+  </li>
+
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-green"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-07-09T13:14:30.000Z" class="post-list__meta--date date">2016-07-09</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">SQLite操作之FMDB</h1>
+  </header>
+
+  <section class="post">
+    <h2 id="FMDB简单介绍"><a href="#FMDB简单介绍" class="headerlink" title="FMDB简单介绍"></a>FMDB简单介绍</h2><h3 id="一、简单说明"><a href="#一、简单说明" class="headerlink" title="一、简单说明"></a>一、简单说明</h3><ul>
+<li><p>1.什么是FMDB<br>  FMDB是iOS平台的SQLite数据库框架<br>  FMDB以OC的方式封装了SQLite的C语言API</p>
+</li>
+<li><p>2.FMDB的优点</p>
+<ul>
+<li>使用起来更加面向对象，省去了很多麻烦、冗余的C语言代码</li>
+<li>对比苹果自带的Core Data框架，更加轻量级和灵活</li>
+<li><p>提供了多线程安全的数据库操作方法，有效地防止数据混乱</p>
+<pre><code>FMDB是用于进行数据存储的第三方的框架，它与SQLite与Core Data相比较，存在很多优势。     
+FMDB是面向对象的，它以OC的方式封装了SQLite的C语言API，使用起来更加的方便，不需要过多的关心数据库操作的知识。但是它本身也存在一些问题，比如跨平台，因为它是用oc的语言封装的，所以只能在ios开发的时候使用，如果想实现跨平台的操作，来降低开发的成本和维护的成本，就需要使用比较原始的SQLite。
+Core Data是ORM的一种体现，使用Core Data需要用到模型数据的转化，虽然操作简单，不需要直接操作数据库，但是性能没有直接使用SQLite高。但是SQLite使用的时候需要使用c语言中的函数，操作比较麻烦，因此需要对它进行封装。但是如果只是简单地封装，很可能会忽略很多重要的细节，比如如何处理并发以及安全性更问题。 
+因此，在这里推荐使用第三方框架FMDB，它是对libsqlite3框架的封装，用起来的步骤与SQLite使用类似，并且它对于多线程的同时操作一个表格时进行了处理，也就意味着它是线程安全的。FMDB是轻量级的框架，使用灵活，它是很多企业开发的首选。 FMDB中重要的类
+</code></pre></li>
+</ul>
+</li>
+<li><p>3.FMDB的github地址</p>
+<p>  <a href="https://github.com/ccgus/fmdb" target="_blank" rel="external">官方主题下载地点</a> </p>
+</li>
+</ul>
+<h3 id="二、核心类"><a href="#二、核心类" class="headerlink" title="二、核心类"></a>二、核心类</h3><ul>
+<li><p>FMDB有三个主要的类</p>
+<ul>
+<li><p>（1）FMDatabase</p>
+<ul>
+<li>一个FMDatabase对象就代表一个单独的SQLite数据库用来执行SQL语句</li>
+</ul>
+</li>
+<li><p>（2）FMResultSet</p>
+<ul>
+<li>使用FMDatabase执行查询后的结果集</li>
+</ul>
+</li>
+<li><p>（3）FMDatabaseQueue</p>
+<ul>
+<li>用于在多线程中执行多个查询或更新，它是线程安全的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="三、打开数据库"><a href="#三、打开数据库" class="headerlink" title="三、打开数据库"></a>三、打开数据库</h3><ul>
+<li><p>通过指定SQLite数据库文件路径来创建FMDatabase对象</p>
+<pre><code>FMDatabase *db = [FMDatabase databaseWithPath:path];
+if (![db open]) {
+NSLog(@&quot;数据库打开失败！&quot;);
+}
+</code></pre></li>
+<li><p>文件路径有三种情况</p>
+<ul>
+<li><p>（1）具体文件路径</p>
+<ul>
+<li>如果不存在会自动创建</li>
+</ul>
+</li>
+<li><p>（2）空字符串@””</p>
+<ul>
+<li>会在临时目录创建一个空的数据库</li>
+<li>当FMDatabase连接关闭时，数据库文件也被删除</li>
+</ul>
+</li>
+<li><p>（3）nil</p>
+<ul>
+<li>会创建一个内存中临时数据库，当FMDatabase连接关闭时，数据库会被销毁</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="四、执行更新"><a href="#四、执行更新" class="headerlink" title="四、执行更新"></a>四、执行更新</h3><ul>
+<li><p>在FMDB中，除查询以外的所有操作，都称为“更新”</p>
+<ul>
+<li>create、drop、insert、update、delete等</li>
+</ul>
+</li>
+<li><p>使用executeUpdate:方法执行更新</p>
+<pre><code>- (BOOL)executeUpdate:(NSString*)sql, ...
+- (BOOL)executeUpdateWithFormat:(NSString*)format, ...
+- (BOOL)executeUpdate:(NSString*)sql withArgumentsInArray:(NSArray *)arguments
+</code></pre></li>
+<li><p>示例</p>
+<pre><code>[db executeUpdate:@&quot;UPDATE t_student SET age = ? WHERE name = ?;&quot;, @20, @&quot;Jack&quot;]
+</code></pre></li>
+</ul>
+<h3 id="五、执行查询"><a href="#五、执行查询" class="headerlink" title="五、执行查询"></a>五、执行查询</h3><ul>
+<li><p>查询方法</p>
+<pre><code>- (FMResultSet *)executeQuery:(NSString*)sql, ...
+- (FMResultSet *)executeQueryWithFormat:(NSString*)format, ...
+- (FMResultSet *)executeQuery:(NSString *)sql withArgumentsInArray:(NSArray *)arguments
+</code></pre></li>
+<li><p>示例</p>
+<pre><code>// 查询数据
+FMResultSet *rs = [db executeQuery:@&quot;SELECT * FROM t_student&quot;];
+// 遍历结果集
+while ([rs next]) {
+NSString *name = [rs stringForColumn:@&quot;name&quot;];
+int age = [rs intForColumn:@&quot;age&quot;];
+double score = [rs doubleForColumn:@&quot;score&quot;];
+}
+</code></pre></li>
+</ul>
+<h3 id="六、代码示例"><a href="#六、代码示例" class="headerlink" title="六、代码示例"></a>六、代码示例</h3><ul>
+<li>1.新建一个项目，导入libsqlite3库，并在项目中包含主头文件</li>
+</ul>
+<img src="/2016/07/09/SQLite操作之FMDB/png1.png" alt="类似博客1" title="类似博客1">
+<ul>
+<li>2.下载第三方框架FMDB</li>
+</ul>
+<img src="/2016/07/09/SQLite操作之FMDB/png2.png" alt="类似博客1" title="类似博客1">
+<ul>
+<li><p>3.示例代码</p>
+<pre><code>YYViewController.m文件
+//
+//  YYViewController.m
+//  04-FMDB基本使用
+//
+//  Created by apple on 14-7-27.
+//  Copyright (c) 2014年 wendingding. All rights reserved.
+//
+
+#import &quot;YYViewController.h&quot;
+#import &quot;FMDB.h&quot;
+
+@interface YYViewController ()
+@property(nonatomic,strong)FMDatabase *db;
+@end
+
+@implementation YYViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    //1.获得数据库文件的路径
+    NSString *doc=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName=[doc stringByAppendingPathComponent:@&quot;student.sqlite&quot;];
+
+//2.获得数据库
+FMDatabase *db=[FMDatabase     databaseWithPath:fileName];
+
+//3.打开数据库
+if ([db open]) {
+    //4.创表
+    BOOL result=[db executeUpdate:@&quot;CREATE TABLE IF NOT EXISTS t_student (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL);&quot;];
+    if (result) {
+        NSLog(@&quot;创表成功&quot;);
+    }else
+    {
+        NSLog(@&quot;创表失败&quot;);
+    }
+}
+self.db=db;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self delete];
+    [self insert];
+    [self query];
+}
+
+//插入数据
+-(void)insert
+{
+for (int i = 0; i&lt;10; i++) {
+    NSString *name = [NSString stringWithFormat:@&quot;jack-%d&quot;, arc4random_uniform(100)];
+    // executeUpdate : 不确定的参数用?来占位
+    [self.db executeUpdate:@&quot;INSERT INTO t_student (name, age) VALUES (?, ?);&quot;, name, @(arc4random_uniform(40))];
+    //        [self.db executeUpdate:@&quot;INSERT INTO t_student (name, age) VALUES (?, ?);&quot; withArgumentsInArray:@[name, @(arc4random_uniform(40))]];
+
+    // executeUpdateWithFormat : 不确定的参数用%@、%d等来占位
+    //        [self.db executeUpdateWithFormat:@&quot;INSERT INTO t_student (name, age) VALUES (%@, %d);&quot;, name, arc4random_uniform(40)];
+}
+}
+
+//删除数据
+-(void)delete
+{
+//    [self.db executeUpdate:@&quot;DELETE FROM t_student;&quot;];
+[self.db executeUpdate:@&quot;DROP TABLE IF EXISTS t_student;&quot;];
+[self.db executeUpdate:@&quot;CREATE TABLE IF NOT EXISTS t_student (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL);&quot;];
+}
+
+//查询
+- (void)query
+{
+// 1.执行查询语句
+FMResultSet *resultSet = [self.db executeQuery:@&quot;SELECT * FROM t_student&quot;];
+
+// 2.遍历结果
+while ([resultSet next]) {
+    int ID = [resultSet intForColumn:@&quot;id&quot;];
+    NSString *name = [resultSet stringForColumn:@&quot;name&quot;];
+    int age = [resultSet intForColumn:@&quot;age&quot;];
+    NSLog(@&quot;%d %@ %d&quot;, ID, name, age);
+}
+}
+
+@end
+</code></pre></li>
+</ul>
+<pre><code>* 提示：
+    `如果ID设置为逐渐，且设置为自动增长的话，那么把表中的数据删除后，重新插入新的数据，ID的编号不是从0开始，而是接着之前的ID进行编号.`
+* 注意：
+`不要写成下面的形式，不要加&apos;&apos;，直接使用%@,它会自动认为这是一个字符串。`
+</code></pre>
+  </section>
+
+</article>
+
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@Longbo Ma</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
+</footer>
+
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-42596364-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
