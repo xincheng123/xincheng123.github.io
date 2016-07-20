@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>微信支付集成-2016年7月 | 半墨雨萧年</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="微信支付集成-2016年7月 | 半墨雨萧年">
+    <meta name="twitter:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="微信支付集成-2016年7月 | 半墨雨萧年">
+    <meta property="og:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    
+    <meta name="author" content="赵新成">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/favicon.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="半墨雨萧年" href="/atom.xml">
+    
+
+    <link rel="canonical" href="http://xingcheng123.tk/2016/07/20/微信支付集成-2016年7月/"/>
+
+    
+    <link rel="author" href="https://www.google.com/+LenboMa"/>
+    
+</head>
+
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 半墨雨萧年 的主页"><img src="/images/logo2.jpg" width="80" alt="半墨雨萧年 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 半墨雨萧年">半墨雨萧年</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">以梦为马，莫负韶华！</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">嗨，我是赵新成，一名来自中国的 iOS 开发者。现居北京。正在修行，探求创意之源。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/projects">项目作品</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/u/3820143749" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/xincheng123" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+  <li class="navigation__item">
+    <a href="https://www.google.com/+LenboMa" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google+</span>
+    </a>
+  </li>
+
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-green"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-07-20T12:10:09.000Z" class="post-list__meta--date date">2016-07-20</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">微信支付集成-2016年7月</h1>
+  </header>
+
+  <section class="post">
+    <h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><p><a href="https://pay.weixin.qq.com/wiki/doc/api/index.html" target="_blank" rel="external">微信支付接入文档</a><br>选择App支付–&gt;进入App支付开发者文档界面</p>
+<p>微信iOS <a href="https://open.weixin.qq.com/zh_CN/htmledition/res/dev/document/sdk/ios/index.html" target="_blank" rel="external">SDK文档</a></p>
+<p>ps:在<a href="https://open.weixin.qq.com" target="_blank" rel="external">微信开发者平台</a>注册APP这样的事一般的是经理给你做好的，这个可以忽略,如果需要做的话，可以参考<a href="http://494075592.blog.51cto.com/10682677/1701260" target="_blank" rel="external">这篇文章</a>。</p>
+<h3 id="熟悉微信支付业务流程"><a href="#熟悉微信支付业务流程" class="headerlink" title="熟悉微信支付业务流程:"></a>熟悉微信支付业务流程:</h3><p>1、用户使用APP客户端，选择商品下单。</p>
+<p>2、商户客户端（就是你做的APP）将用户的商品数据传给商户服务器，请求生成支付订单。</p>
+<p>3、商户后台调用统一下单API向微信的服务器发送请求，微信服务器生成预付单，并生成一个prepay_id返回给商户后台。</p>
+<p>4、商户后台将这个prepay_id返回给商户客户端。</p>
+<p>5、用户点击确认支付，这时候商户客户端调用SDK打开微信客户端，进行微信支付。</p>
+<p>6、微信客户端向微信服务器发起支付请求并返回支付结果（他们之间交互用的就是prepay_id这个参数，微信的服务器要验证微信客户端传过去的参数是否跟第三步中生成的那个id一致）。</p>
+<p>7、用户输入支付密码后，微信客户端提交支付授权，跟微信服务器交互，完成支付。</p>
+<p>8、微信服务器给微信客户端发送支付结果提示，并异步给商户服务器发送支付结果通知。</p>
+<p>9、商户客户端通过支付结果回调接口查询支付结果，并向后台检查支付结果是否正确，后台返回支付结果。</p>
+<p>10、商户客户端显示支付结果，完成订单，发货。</p>
+<p>虽然看起来有点多，但是理解起来并不复杂，跟我们平时手机上买东西是一样的。我们客户端需要做的就是：</p>
+<p><code>• 调起微信客户端发起支付</code></p>
+<p><code>• 显示支付结果</code></p>
+<p>• 官方流程图:</p>
+<img src="/2016/07/20/微信支付集成-2016年7月/png1.png" alt="官方流程图" title="官方流程图">
+<h3 id="集成过程"><a href="#集成过程" class="headerlink" title="集成过程:"></a>集成过程:</h3><h4 id="1-gt-下载SDK和官方Demo"><a href="#1-gt-下载SDK和官方Demo" class="headerlink" title="1&gt;下载SDK和官方Demo"></a>1&gt;下载SDK和官方Demo</h4><img src="/2016/07/20/微信支付集成-2016年7月/png2.png" alt="SDK下载" title="SDK下载">
+<p>下载后解压得到如下图文件:</p>
+<img src="/2016/07/20/微信支付集成-2016年7月/png3.png" alt="SDK解压" title="SDK解压">
+<h3 id="3-gt-把SDK文件拖入自己的项目"><a href="#3-gt-把SDK文件拖入自己的项目" class="headerlink" title="3&gt;把SDK文件拖入自己的项目"></a>3&gt;把SDK文件拖入自己的项目</h3><p><code>(注意这一步,需要先确定如果APP里面使用了友盟或者ShareSDK做分享，那就不用再导入SDK了，否则会出现一些诡异的问题，例如无法调起手机微信客户端、无法调起微信客户端web页面，调起了但是一闪而过。。。这都基本上都是因为分享的SDK里面已经包括了微信的SDK。所以如果出现诡异的错误了看看是不是两个冲突了！而且有时候友盟分享或者ShareSDK导入的微信SDK可能不完整,如果不完整,还是需要你导入缺失的那部分微信SDK的,不如我有个项目里就只少WechatAuthSDK.h这个头文件,那么导入这个头文件即可),这里演示导入微信完整SDK的过程:</code></p>
+<img src="/2016/07/20/微信支付集成-2016年7月/png4.png" alt="导入SDK" title="导入SDK">
+<h3 id="4-gt-导入依赖的系统库有两个地方可以导入"><a href="#4-gt-导入依赖的系统库有两个地方可以导入" class="headerlink" title="4&gt;导入依赖的系统库有两个地方可以导入"></a>4&gt;导入依赖的系统库有两个地方可以导入</h3><p>1)在Target —&gt; BuildPhases —&gt; Link Binary With Libraries— 点击+号 -&gt; 搜索你需要的系统库。</p>
+<p>或者</p>
+<p>2)在Target—&gt;General—-&gt;Linked  Frameworks  and Libraries–&gt;点击+号–&gt;搜索你需要的系统库</p>
+<img src="/2016/07/20/微信支付集成-2016年7月/png5.png" alt="导入依赖库" title="导入依赖库">
+<p>需要导入的库:</p>
+<p>• SystemConfiguration.framework</p>
+<p>• libz.tbd </p>
+<p>• libsqlite3.0.tbd</p>
+<p>• CoreTelephony.framework</p>
+<p>• QuartzCore.framework</p>
+<p>• libc++.tbd     <code>(开始我没少导入了这个库报错了)</code></p>
+<h3 id="5-gt-设置URL-Scheme"><a href="#5-gt-设置URL-Scheme" class="headerlink" title="5&gt;设置URL Scheme"></a>5&gt;设置URL Scheme</h3><p>在注册微信平台APP的时候，会给一个唯一识别标识符（APPID），在APP端开发步骤里面说得很清楚了，需要把这个App ID填在URL Schemes这个地方</p>
+<img src="/2016/07/20/微信支付集成-2016年7月/png6.png" alt="导入依赖库" title="导入依赖库">
+<h3 id="6-gt-在Appdelegate中注册APPID"><a href="#6-gt-在Appdelegate中注册APPID" class="headerlink" title="6&gt;在Appdelegate中注册APPID"></a>6&gt;在Appdelegate中注册APPID</h3><p>需要先导入头文件,并让Appdelegate遵守微信代理协议:</p>
+<img src="/2016/07/20/微信支付集成-2016年7月/png7.png" alt="导入依赖库" title="导入依赖库">
+<h4 id="然后注册App-ID如下："><a href="#然后注册App-ID如下：" class="headerlink" title="然后注册App ID如下："></a>然后注册App ID如下：</h4><pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+// Override point for customization after application launch.
+/**
+ *  向微信终端注册ID，这里的APPID一般建议写成宏,容易维护。@“测试demo”不需用管。这里的id是假的，需要改这里还有target里面的URL Type
+ */
+[WXApi registerApp:@&quot;这里改成你的App ID&quot; withDescription:@&quot;测试demo&quot;];
+return YES;
+}
+</code></pre><h3 id="7-gt-实现下面三个方法-作用是从微信界面返回当前客户端时调用该方法"><a href="#7-gt-实现下面三个方法-作用是从微信界面返回当前客户端时调用该方法" class="headerlink" title="7&gt;实现下面三个方法,作用是从微信界面返回当前客户端时调用该方法"></a>7&gt;实现下面三个方法,作用是从微信界面返回当前客户端时调用该方法</h3><pre><code>//前面的两个方法被iOS9弃用了为了适配低版本,最好写上。注意,handleOpenURL中的url是你当前客户端的url,这个url中包含有App ID,delegate设置的是self,所以微信的代理是当前类Appdelegate,当前也可以吧代理设置为任意其他类,根据你的需求决定,设置的代理是谁,就把微信的回调方法写在那个类里面
+
+//9.0前的方法，为了适配低版本 保留
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+return [WXApi handleOpenURL:url delegate:self];
+}
+
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+return [WXApi handleOpenURL:url delegate:self];
+}
+
+
+//9.0后的方法
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary&lt;NSString *,id&gt; *)options{
+//这里判断是否发起的请求为微信支付，如果是的话，用WXApi的方法调起微信客户端的支付页面（://pay 之前的那串字符串就是你的APPID，）
+    return  [WXApi handleOpenURL:url delegate:self];
+}
+</code></pre><h3 id="8-gt-在微信的代理类中实现微信代理的回调方法-这里微信的代理类是Appdelegate"><a href="#8-gt-在微信的代理类中实现微信代理的回调方法-这里微信的代理类是Appdelegate" class="headerlink" title="8&gt;在微信的代理类中实现微信代理的回调方法,这里微信的代理类是Appdelegate"></a>8&gt;在微信的代理类中实现微信代理的回调方法,这里微信的代理类是Appdelegate</h3><pre><code>//微信SDK自带的方法，处理从微信客户端完成操作后返回程序之后的回调方法,显示支付结果的
+-(void) onResp:(BaseResp*)resp
+{  
+
+//启动微信支付的response
+NSString *payResoult = [NSString stringWithFormat:@errcode:%d, resp.errCode];
+if([resp isKindOfClass:[PayResp class]]){
+    //支付返回结果，实际支付结果需要去微信服务器端查询
+    switch (resp.errCode) {
+        case 0:
+            payResoult = @支付结果：成功！;
+            break;
+        case -1:
+            payResoult = @支付结果：失败！;
+            break;
+        case -2:
+            payResoult = @用户已经退出支付！;
+            break;
+        default:
+            payResoult = [NSString stringWithFormat:@支付结果：失败！retcode = %d, retstr = %@, resp.errCode,resp.errStr];
+            break;
+            }
+    }
+}
+</code></pre><h3 id="9-gt-前面的准备工作完成后-就开始实现下单–-gt-调起微信支付的步骤"><a href="#9-gt-前面的准备工作完成后-就开始实现下单–-gt-调起微信支付的步骤" class="headerlink" title="9&gt;前面的准备工作完成后,就开始实现下单–&gt;调起微信支付的步骤"></a>9&gt;前面的准备工作完成后,就开始实现下单–&gt;调起微信支付的步骤</h3><pre><code>//微信支付方法
+- (NSString *)WXPay{
+
+NSString *urlString   = @&quot;http://wxpay.weixin.qq.com/pub_v2/app/app_pay.php?plat=ios&quot;;
+
+//解析服务端返回json数据
+NSError *error;
+
+//加载一个NSURL对象
+NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+
+//将请求的url数据放到NSData对象中
+NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+
+if ( response != nil) {
+    NSMutableDictionary *dict = NULL;
+
+    //IOS5自带解析类NSJSONSerialization从response中解析出数据放到字典中
+    dict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableLeaves error:&amp;error];
+
+    NSLog(@&quot;url:%@&quot;,urlString);
+    if(dict != nil){
+
+        NSMutableString *retcode = [dict objectForKey:@&quot;retcode&quot;];
+        if (retcode.intValue == 0){
+
+        NSMutableString *stamp  = [dict objectForKey:@&quot;timestamp&quot;];
+
+            //调起微信支付
+            PayReq* req             = [[PayReq alloc] init];
+            req.partnerId           = [dict objectForKey:@&quot;partnerid&quot;];
+            req.prepayId            = [dict objectForKey:@&quot;prepayid&quot;];
+            req.nonceStr            = [dict objectForKey:@&quot;noncestr&quot;];
+            req.timeStamp           = stamp.intValue;
+            req.package             = [dict objectForKey:@&quot;package&quot;];
+            req.sign                = [dict objectForKey:@&quot;sign&quot;];
+            //调启微信App
+            [WXApi sendReq:req];
+
+            //日志输出
+            NSLog(@&quot;appid=%@\npartid=%@\nprepayid=%@\nnoncestr=%@\ntimestamp=%ld\npackage=%@\nsign=%@&quot;,[dict objectForKey:@&quot;appid&quot;],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign );
+
+            return @&quot;&quot;;
+        }else{
+
+            return [dict objectForKey:@&quot;retmsg&quot;];
+        }
+    }else{
+
+        return @&quot;服务器返回错误，未获取到json对象&quot;;
+    }
+}else{
+
+    return @&quot;服务器返回错误&quot;;
+}
+</code></pre><p>PS:到这里微信支付已经完成,可是开始微信支付了.这篇文章中，签名都是在后台做的，如果需要在你客户端做，可以参考下<a href="http://www.2cto.com/weixin/201507/412756.html" target="_blank" rel="external">这篇文章</a>，和<a href="http://www.2cto.com/kf/201505/403346.html" target="_blank" rel="external">这篇文章</a>，他们的签名在客户端做的，写的也比较详细了.</p>
+<h4 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h4><p>1.如果支付完成后，一直留在微信，那就检查下URLType中的Scheme设置问题。</p>
+<p>2.能够打开微信客户端，但是打开后只有中间一个白色的 “确定按钮”，点击后会回到客户端上，如果是这样，那应该是prepayid 参数的问题，过期了，或者不是真实的id。代码没有问题的。特别注意的是，微信要两次签名，两次~~~~</p>
+<p>3.如果APP里面使用了友盟或者ShareSDK做分享，那就不用再导入SDK了，否则会出现一些诡异的问题，例如无法调起手机微信客户端、无法调起微信客户端web页面，调起了但是一闪而过。。。这都基本上都是因为分享的SDK里面已经包括了微信的SDK。所以如果出现诡异的错误了看看是不是两个冲突了！</p>
+<p>4.微信支付的单位是分!</p>
+
+  </section>
+
+</article>
+
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@Longbo Ma</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
+</footer>
+
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-42596364-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
