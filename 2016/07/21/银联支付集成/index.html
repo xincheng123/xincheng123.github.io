@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>银联支付集成-2016年7月 | 半墨雨萧年</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="银联支付集成-2016年7月 | 半墨雨萧年">
+    <meta name="twitter:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="银联支付集成-2016年7月 | 半墨雨萧年">
+    <meta property="og:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    
+    <meta name="author" content="赵新成">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/favicon.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="半墨雨萧年" href="/atom.xml">
+    
+
+    <link rel="canonical" href="http://xingcheng123.tk/2016/07/21/银联支付集成/"/>
+
+    
+    <link rel="author" href="https://www.google.com/+LenboMa"/>
+    
+</head>
+
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 半墨雨萧年 的主页"><img src="/images/logo2.jpg" width="80" alt="半墨雨萧年 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 半墨雨萧年">半墨雨萧年</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">以梦为马，莫负韶华！</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">嗨，我是赵新成，一名来自中国的 iOS 开发者。现居北京。正在修行，探求创意之源。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/projects">项目作品</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/u/3820143749" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/xincheng123" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+  <li class="navigation__item">
+    <a href="https://www.google.com/+LenboMa" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google+</span>
+    </a>
+  </li>
+
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-green"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-07-21T13:05:47.000Z" class="post-list__meta--date date">2016-07-21</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">银联支付集成-2016年7月</h1>
+  </header>
+
+  <section class="post">
+    <p>银联官网在<a href="https://open.unionpay.com/ajweb/index" target="_blank" rel="external">这里</a>在银联官网能下载SDK或者是看文档。</p>
+<h2 id="首先了解下银联支付的支付流程"><a href="#首先了解下银联支付的支付流程" class="headerlink" title="首先了解下银联支付的支付流程:"></a>首先了解下银联支付的支付流程:</h2><img src="/2016/07/21/银联支付集成/png1.png" alt="官方流程图" title="官方流程图">
+<p>流程图说明：</p>
+<p>（1）用户在客户端中点击购买商品，客户端发起订单生成请求到商户后台；</p>
+<p>（2）商户后台收到订单生成请求后，按照《手机控件支付产品接口规范》组织并推送订单信息至银联后台；</p>
+<p>（3）银联后台接收订单信息并检查通过后，生成对应交易流水号（即TN），并回复至商户后台（应答要素：交易流水号等）；</p>
+<p>（4）商户后台接收到交易流水号（TN），将交易流水号返回至客户端；</p>
+<p>（5）客户端通过交易流水号（TN）调用支付控件；</p>
+<p>（6）用户在支付控件中输入相关支付信息后，由支付控件向银联后台发起支付请求；</p>
+<p>（7）支付成功后，银联后台将支付结果通知给商户后台；</p>
+<p>（8）银联后台同时也将支付结果通知支付控件；</p>
+<p>（9）支付控件显示支付结果并将支付结果返回至客户端；</p>
+<h2 id="测试帐号"><a href="#测试帐号" class="headerlink" title="测试帐号"></a>测试帐号</h2><p>以下是测试用卡号、手机号等信息（<code>此类信息仅供测试使用，不会发生真实交易</code>）</p>
+<pre><code>招商银行借记卡：6226090000000048
+手机号：18100000000
+密码：111101
+短信验证码：123456（`先点获取验证码之后再输入`）
+证件类型：01身份证
+证件号：510265790128303
+姓名：张三
+
+ 华夏银行贷记卡：6226388000000095
+ 手机号：18100000000
+CVN2：248
+有效期：1219
+短信验证码：123456（`先点获取验证码之后再输入`）
+证件类型：01身份证
+证件号：510265790128303
+姓名：张三
+</code></pre><h3 id="1-首先，SDK在这里下载"><a href="#1-首先，SDK在这里下载" class="headerlink" title="1.首先，SDK在这里下载"></a>1.首先，SDK在<a href="https://open.unionpay.com/ajweb/help/file/techFile?productId=3" target="_blank" rel="external">这里下载</a></h3><p>选择手机控件支付开发包(IOS版)下载</p>
+<img src="/2016/07/21/银联支付集成/png2.png" alt="官方流程图" title="官方流程图">
+<h3 id="2-下载后解压下面这个压缩包"><a href="#2-下载后解压下面这个压缩包" class="headerlink" title="2.下载后解压下面这个压缩包:"></a>2.下载后解压下面这个压缩包:</h3><img src="/2016/07/21/银联支付集成/png3.png" alt="官方流程图" title="官方流程图">
+<p>解压后如下图:</p>
+<img src="/2016/07/21/银联支付集成/png4.png" alt="官方流程图" title="官方流程图">
+<ul>
+<li>在”开发联调步骤向导.txt”文件中可以得到一些测试账号等有用信息(建议看看哦!)</li>
+<li>控件开发包中就是银联的SDK,控件使用指南文件夹中有一个文档,是”中国银联手机支付控件接入指南iOS”,写的是如何接入银联SDK,非常详细有木有!</li>
+</ul>
+<h3 id="3-导入SDK-把下面paymentcontrol文件夹拖入工程-demo是银联的demo-写的很麻烦-没必要看-不过也可以参考一下"><a href="#3-导入SDK-把下面paymentcontrol文件夹拖入工程-demo是银联的demo-写的很麻烦-没必要看-不过也可以参考一下" class="headerlink" title="3.导入SDK,把下面paymentcontrol文件夹拖入工程,demo是银联的demo,写的很麻烦,没必要看,不过也可以参考一下."></a>3.导入SDK,把下面paymentcontrol文件夹拖入工程,demo是银联的demo,写的很麻烦,没必要看,不过也可以参考一下.</h3><img src="/2016/07/21/银联支付集成/png5.png" alt="官方流程图" title="官方流程图">
+<p>SDK拖入后:</p>
+<img src="/2016/07/21/银联支付集成/png6.png" alt="官方流程图" title="官方流程图">
+<h3 id="4-添加3个依赖库文件"><a href="#4-添加3个依赖库文件" class="headerlink" title="4.添加3个依赖库文件:"></a>4.添加3个依赖库文件:</h3><ul>
+<li>CFNetwork.framework</li>
+<li>ＳystemConfiguration.framework </li>
+<li>libz</li>
+</ul>
+<img src="/2016/07/21/银联支付集成/png7.png" alt="官方流程图" title="官方流程图">
+<h3 id="5-在工程info-plist设置中添加一个URL-Schemes-测试中可以使用“UPPayDemo”作为URL-Schemes-，用于在支付完成后返回商户客户端。"><a href="#5-在工程info-plist设置中添加一个URL-Schemes-测试中可以使用“UPPayDemo”作为URL-Schemes-，用于在支付完成后返回商户客户端。" class="headerlink" title="5.在工程info.plist设置中添加一个URL Schemes(测试中可以使用“UPPayDemo”作为URL Schemes)，用于在支付完成后返回商户客户端。"></a>5.在工程info.plist设置中添加一个URL Schemes(测试中可以使用“UPPayDemo”作为URL Schemes)，用于在支付完成后返回商户客户端。</h3><img src="/2016/07/21/银联支付集成/png8.png" alt="官方流程图" title="官方流程图">
+<h3 id="6-http请求设置-如果已经允许app联网-可忽略这一步"><a href="#6-http请求设置-如果已经允许app联网-可忽略这一步" class="headerlink" title="6.http请求设置,如果已经允许app联网,可忽略这一步"></a>6.http请求设置,如果已经允许app联网,可忽略这一步</h3><p>在Xcode7.0之后的版本中进行http请求时，需要在工程对应的info.plist文件中添加NSAppTransportSecurity  Dictionary 并同时设置里面NSAllowsArbitraryLoads 属性值为 YES，具体设置可参照以下截图：</p>
+<img src="/2016/07/21/银联支付集成/png9.png" alt="官方流程图" title="官方流程图">
+<p>或者</p>
+<p>直接添加如下代码到info.plist文件中：</p>
+<pre><code>&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+    &lt;dict&gt;
+        &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;
+        &lt;true/&gt;
+    &lt;/dict&gt;
+</code></pre><h3 id="7-添加协议白名单"><a href="#7-添加协议白名单" class="headerlink" title="7.添加协议白名单"></a>7.添加协议白名单</h3><p>在Xcode7.0之后的版本中进行开发，需要在工程对应的plist文件中，添加LSApplicationQueriesSchemes  Array并加入uppaysdk、uppaywallet、uppayx1、uppayx2、uppayx3五个item，具体设置可参考以下截图：</p>
+<img src="/2016/07/21/银联支付集成/png10.png" alt="官方流程图" title="官方流程图">
+<p>或者</p>
+<p>直接添加如下代码到plist文件中：</p>
+<pre><code>&lt;key&gt;LSApplicationQueriesSchemes&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;uppaysdk&lt;/string&gt;
+        &lt;string&gt;uppaywallet&lt;/string&gt;
+        &lt;string&gt;uppayx1&lt;/string&gt;
+        &lt;string&gt;uppayx2&lt;/string&gt;
+        &lt;string&gt;uppayx3&lt;/string&gt;
+    &lt;/array&gt;
+</code></pre><p>在plist文件中以代码形式查看plist文件如下图:</p>
+<img src="/2016/07/21/银联支付集成/png11.png" alt="官方流程图" title="官方流程图">
+<h3 id="8-在需要调用支付控件接口的代码文件内引用头文件UPPaymentControl-h。编译后会出现一个"><a href="#8-在需要调用支付控件接口的代码文件内引用头文件UPPaymentControl-h。编译后会出现一个" class="headerlink" title="8.在需要调用支付控件接口的代码文件内引用头文件UPPaymentControl.h。编译后会出现一个"></a>8.在需要调用支付控件接口的代码文件内引用头文件UPPaymentControl.h。编译后会出现一个</h3><p><code>Undefined for architecture XXX 错误</code></p>
+<p>下面两个是测试时可以使用的url,用于向银联请求tn,实际项目中由后台给出.</p>
+<img src="/2016/07/21/银联支付集成/png12.png" alt="官方流程图" title="官方流程图">
+<p><code>#define kURL_TN_Normal     @&quot;http://101.231.204.84:8091/sim/getacptn&quot;</code></p>
+<p><code>#define kURL_TN_Configure  @&quot;http://101.231.204.84:8091/sim/app.jsp?user=123456789&quot;</code></p>
+<h3 id="9-点击支付按钮时调用下面这个方法来向网络请求得到Tn-交易流水号"><a href="#9-点击支付按钮时调用下面这个方法来向网络请求得到Tn-交易流水号" class="headerlink" title="9.点击支付按钮时调用下面这个方法来向网络请求得到Tn(交易流水号)."></a>9.点击支付按钮时调用下面这个方法来向网络请求得到Tn(交易流水号).</h3><p>我这里使用的是NSURLConnection与官方的demo一样,所以如果你的项目最低适配版本太高可能无法请求到数据.</p>
+<p><code>解决方法一:把项目的最低适配版本改小</code></p>
+<img src="/2016/07/21/银联支付集成/png13.png" alt="官方流程图" title="官方流程图">
+<p><code>解决方式二:把我这里的NSURLConnection请求改成AFN请求或NSURLSession请求都可以.</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//点击支付按钮</span><br><span class="line">- (IBAction)YinLianPay&#123;</span><br><span class="line">   </span><br><span class="line">    //创建url</span><br><span class="line">    NSURL * url = [NSURL URLWithString:kURL_TN_Normal];</span><br><span class="line">    </span><br><span class="line">    //封装成请求</span><br><span class="line">    NSURLRequest * urlRequest=[NSURLRequest requestWithURL:url];</span><br><span class="line">    NSURLConnection* urlConn = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];</span><br><span class="line">    </span><br><span class="line">    //发送网络请求</span><br><span class="line">    [urlConn start];</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="10-请求到的tn需要从NSURLConnectionDataDelegate的代理方法中获取-下面是能用到的四个代理方法"><a href="#10-请求到的tn需要从NSURLConnectionDataDelegate的代理方法中获取-下面是能用到的四个代理方法" class="headerlink" title="10.请求到的tn需要从NSURLConnectionDataDelegate的代理方法中获取,下面是能用到的四个代理方法"></a>10.请求到的tn需要从NSURLConnectionDataDelegate的代理方法中获取,下面是能用到的四个代理方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark - 网络请求的代理方法</span><br><span class="line">//收到响应调用的方法</span><br><span class="line">- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse*)response</span><br><span class="line">&#123;</span><br><span class="line">    NSHTTPURLResponse* rsp = (NSHTTPURLResponse*)response;</span><br><span class="line">    NSInteger code = [rsp statusCode];</span><br><span class="line">    if (code != 200)</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;请求失败&quot;);</span><br><span class="line">        [connection cancel];</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">        NSLog(@&quot;请求成功&quot;);</span><br><span class="line">		//创建一个NSMutableData类型的属性</span><br><span class="line">        _responseData = [[NSMutableData alloc] init];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//收到响应的数据</span><br><span class="line">- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data</span><br><span class="line">&#123;</span><br><span class="line">	//网络请求到的数据,添加到_responseData变量中,_responseData是我们自己声明NSMutableData类型的属性</span><br><span class="line">    [_responseData appendData:data];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//网络请求结束调用的方法</span><br><span class="line">- (void)connectionDidFinishLoading:(NSURLConnection *)connection</span><br><span class="line">&#123;</span><br><span class="line">    //从_responseData中保存的tn解析成字符串tn</span><br><span class="line">    NSString* tn = [[NSMutableString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding];</span><br><span class="line">    if (tn != nil &amp;&amp; tn.length &gt; 0)</span><br><span class="line">    &#123;</span><br><span class="line">        //打印tn</span><br><span class="line">            NSLog(@&quot;tn=%@&quot;,tn);</span><br><span class="line">		//调用银联支付,tn作为参数</span><br><span class="line">            [self YinLianPay:tn];</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error</span><br><span class="line">&#123;</span><br><span class="line">    NSLog(@&quot;网络请求错误%@&quot;,error);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">11.调用银联支付的核心方法,上一步中会用到这个方法</span><br><span class="line">//开始银联支付</span><br><span class="line">-(void)YinLianPay:(NSString *)tn&#123;</span><br><span class="line">   </span><br><span class="line">    if (tn != nil  &amp;&amp; tn.length &gt; 0) &#123;</span><br><span class="line">         //检查是否安装银联App的接口</span><br><span class="line">        if ([[UPPaymentControl defaultControl] isPaymentAppInstalled]) &#123;</span><br><span class="line">                  /*开始支付</span><br><span class="line">				tn是交易流水号，商户后台向银联后台提交订单信息后，由银联后台生成并下发给商户后台的交易凭证；</span><br><span class="line">				UPPayDemo是URL Scheme中填写的字符串,</span><br><span class="line">				mode是接入模式，标识商户以何种方式调用支付控件，该参数提供以下两个可选值：</span><br><span class="line">					&quot;00&quot;代表接入生产环境（正式版本需要）；</span><br><span class="line">					&quot;01&quot;代表接入开发测试环境（测试版本需要）；</span><br><span class="line">					</span><br><span class="line">				self是发起调用的视图控制器，商户应用程序调用银联手机支付控件的视图控制器；</span><br><span class="line">				*/</span><br><span class="line">           if( [[UPPaymentControl defaultControl] startPay:tn fromScheme:@&quot;UPPayDemo&quot; mode:@&quot;01&quot; viewController:self])&#123;</span><br><span class="line">    </span><br><span class="line">            NSLog(@&quot;调起支付控件成功&quot;);</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">    </span><br><span class="line">             NSLog(@&quot;调起支付控件失败&quot;);</span><br><span class="line">        &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="11-处理回调"><a href="#11-处理回调" class="headerlink" title="11.处理回调"></a>11.处理回调</h3><p><code>在Appdelegate中导入#import &quot;UPPaymentControl.h&quot;</code></p>
+<p>然后在该类中实现OpenURL方法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">/*completeBlock中的NSDictionary *data结构如下：</span><br><span class="line"> sign —— 签名后做Base64的数据</span><br><span class="line"> data —— 用于签名的原始数据，结构如下：</span><br><span class="line"> pay_result —— 支付结果success，fail，cancel</span><br><span class="line"> tn          —— 订单号</span><br><span class="line">*/</span><br><span class="line">-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary&lt;NSString *,id&gt; *)options&#123;</span><br><span class="line">    //回调方法</span><br><span class="line">    [[UPPaymentControl defaultControl] handlePaymentResult:url completeBlock:^(NSString *code, NSDictionary *data) &#123;</span><br><span class="line">        //结果code为成功时，先校验签名，校验成功后做后续处理</span><br><span class="line">        if([code isEqualToString:@&quot;success&quot;]) &#123;</span><br><span class="line">            </span><br><span class="line">            //数据从NSDictionary转换为NSString</span><br><span class="line">            NSLog(@&quot;%@&quot;,data);</span><br><span class="line">            NSString *sign = data[@&quot;sign&quot;];</span><br><span class="line">            </span><br><span class="line">            //判断签名数据是否存在</span><br><span class="line">            if(data == nil)&#123;</span><br><span class="line">                //如果没有签名数据，建议商户app后台查询交易结果</span><br><span class="line">                NSLog(@&quot;没有签名数据，建议商户app后台查询交易结果&quot;);</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            //验签证书同后台验签证书</span><br><span class="line">            //此处的verify，商户需送去商户后台做验签</span><br><span class="line">            if([self verify:sign]) &#123;</span><br><span class="line">                //支付成功且验签成功，展示支付成功提示</span><br><span class="line">                NSLog(@&quot;支付成功&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            else &#123;</span><br><span class="line">                //验签失败，交易结果数据被篡改，商户app后台查询交易结果</span><br><span class="line">                NSLog(@&quot;支付失败&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        else if([code isEqualToString:@&quot;fail&quot;]) &#123;</span><br><span class="line">            //交易失败</span><br><span class="line">            NSLog(@&quot;交易失败&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        else if([code isEqualToString:@&quot;cancel&quot;]) &#123;</span><br><span class="line">            //交易取消</span><br><span class="line">            NSLog(@&quot;交易取消&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;];</span><br><span class="line">    </span><br><span class="line">    return YES;</span><br><span class="line">&#125;</span><br><span class="line">//去后台验证sign的逻辑写在这个方法这里</span><br><span class="line">-(BOOL)verify:(NSString *) sign&#123;</span><br><span class="line"></span><br><span class="line">    //去后台对sign做验证,查看信息是否真实</span><br><span class="line">    </span><br><span class="line">    return YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="到这里-银联支付已经集成完毕-可以用测试账号进行支付测试-强列建议仔细阅读SDK解压包中的app开发包中的控件使用指南"><a href="#到这里-银联支付已经集成完毕-可以用测试账号进行支付测试-强列建议仔细阅读SDK解压包中的app开发包中的控件使用指南" class="headerlink" title="到这里,银联支付已经集成完毕.可以用测试账号进行支付测试.强列建议仔细阅读SDK解压包中的app开发包中的控件使用指南:"></a>到这里,银联支付已经集成完毕.可以用测试账号进行支付测试.强列建议仔细阅读SDK解压包中的app开发包中的控件使用指南:</h4><img src="/2016/07/21/银联支付集成/png14.png" alt="官方流程图" title="官方流程图">
+<h4 id="支付测试一般需要真机测试-银联支付真机测试需要真机安装了银联安全支付助手这个app"><a href="#支付测试一般需要真机测试-银联支付真机测试需要真机安装了银联安全支付助手这个app" class="headerlink" title="支付测试一般需要真机测试,银联支付真机测试需要真机安装了银联安全支付助手这个app"></a>支付测试一般需要真机测试,银联支付真机测试需要真机安装了银联安全支付助手这个app</h4>
+
+  </section>
+
+</article>
+
+
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@Longbo Ma</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
+</footer>
+
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-42596364-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
