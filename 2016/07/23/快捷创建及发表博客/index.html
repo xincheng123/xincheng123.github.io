@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>半墨雨萧年 | 以梦为马，莫负韶华！</title>
+    <title>快捷创建博客及发表博客 | 半墨雨萧年</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="半墨雨萧年 | 以梦为马，莫负韶华！">
+    <meta name="twitter:title" content="快捷创建博客及发表博客 | 半墨雨萧年">
     <meta name="twitter:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="半墨雨萧年 | 以梦为马，莫负韶华！">
+    <meta property="og:title" content="快捷创建博客及发表博客 | 半墨雨萧年">
     <meta property="og:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="半墨雨萧年" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://xingcheng123.tk"/>
+    <link rel="canonical" href="http://xingcheng123.tk/2016/07/23/快捷创建及发表博客/"/>
 
     
     <link rel="author" href="https://www.google.com/+LenboMa"/>
@@ -148,60 +148,71 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-07-23T11:23:31.000Z" class="post-list__meta--date date">2016-07-23</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">快捷创建博客及发表博客</h1>
+  </header>
+
+  <section class="post">
+    <h3 id="1-打开终端-cd到hexo目录下"><a href="#1-打开终端-cd到hexo目录下" class="headerlink" title="1.打开终端,cd到hexo目录下"></a>1.打开终端,cd到hexo目录下</h3><img src="/2016/07/23/快捷创建及发表博客/png1.png" alt="类似博客1" title="类似博客1">
+<h3 id="2-进入hexo目录后-输入以下目录-创建博客文件-文件是-md后缀的"><a href="#2-进入hexo目录后-输入以下目录-创建博客文件-文件是-md后缀的" class="headerlink" title="2.进入hexo目录后,输入以下目录,创建博客文件,文件是.md后缀的"></a>2.进入hexo目录后,输入以下目录,创建博客文件,文件是.md后缀的</h3><pre><code>hexo new   博客名称
+</code></pre><p>比如我想创建一个名为<code>集成多说评论模块</code>的博客,代码如下</p>
+<pre><code>hexo  new  集成多说评论模块
+</code></pre><img src="/2016/07/23/快捷创建及发表博客/png2.png" alt="类似博客1" title="类似博客1">
+<h3 id="3-现在就可以到-hexo-source-posts-目录下找到你刚刚创建的-md后缀的文件-而且自动生成了一个同名的文件夹-用于放你该篇博客中用到的图片资源"><a href="#3-现在就可以到-hexo-source-posts-目录下找到你刚刚创建的-md后缀的文件-而且自动生成了一个同名的文件夹-用于放你该篇博客中用到的图片资源" class="headerlink" title="3.现在就可以到/hexo/source/_posts/目录下找到你刚刚创建的.md后缀的文件,而且自动生成了一个同名的文件夹,用于放你该篇博客中用到的图片资源"></a>3.现在就可以到/hexo/source/_posts/目录下找到你刚刚创建的.md后缀的文件,而且自动生成了一个同名的文件夹,用于放你该篇博客中用到的图片资源</h3><img src="/2016/07/23/快捷创建及发表博客/png3.png" alt="类似博客1" title="类似博客1">
+<h3 id="4-双击打开-md文件开始编辑博客-编辑完成后保存-然后回到终端-输入以下命令"><a href="#4-双击打开-md文件开始编辑博客-编辑完成后保存-然后回到终端-输入以下命令" class="headerlink" title="4.双击打开.md文件开始编辑博客,编辑完成后保存,然后回到终端,输入以下命令"></a>4.双击打开.md文件开始编辑博客,编辑完成后保存,然后回到终端,输入以下命令</h3><ol>
+<li><p>生成静态网页</p>
+<pre><code>hexo generate
+</code></pre></li>
+<li><p>打开hexo服务</p>
+<pre><code>hexo server
+</code></pre><p><code>打开hexo服务后就可以在浏览器中通过 localhost:4000 本地预览以下你发布的博客,此时别人还没法看到,因为还需要把博客部署到github上</code></p>
+</li>
+<li><p>关闭hexo服务</p>
+<pre><code>Control  + C    //关闭hexo服务
+</code></pre></li>
+<li><p>部署到github</p>
+<pre><code>hexo deploy
+</code></pre></li>
+</ol>
+<blockquote>
+<p>部署到github上时,如果你需要部署的图片资源比较多,可能需要等一会才能上传完成,等待上传完成,就可以通过你自己的博客地址查看你的博客了</p>
+</blockquote>
+<h3 id="5-编辑Markdown博客的语法可以通过以下网址学习"><a href="#5-编辑Markdown博客的语法可以通过以下网址学习" class="headerlink" title="5.编辑Markdown博客的语法可以通过以下网址学习"></a>5.编辑Markdown博客的语法可以通过以下网址学习</h3><p><a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a></p>
+<p><a href="http://www.yangzhiping.com/tech/r-markdown-knitr.html" target="_blank" rel="external">Markdown写作浅谈</a></p>
+<p><a href="http://www.appinn.com/markdown-tools/" target="_blank" rel="external">Markdown工具推荐</a></p>
+<p><a href="http://www.mceiba.com/develop/markdown-syntax.html" target="_blank" rel="external">Markdown语法</a> -&gt;特别推荐</p>
+<p><a href="http://www.appinn.com/markdown/" target="_blank" rel="external">Markdown语法详解</a></p>
+<p><a href="http://blog.csdn.net/guodongxiaren/article/details/23690801" target="_blank" rel="external">GitHub中的Markdown</a>及<a href="https://github.com/guodongxiaren/README" target="_blank" rel="external">Demo</a></p>
+
+  </section>
+
+</article>
+
   
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/05/09/博客主题优化/" title="link to post.title">博客主题优化</a></h2>
-      <p class="excerpt">
-    
-      第一步:从官网下载主题或者直接clong主题到下面的文件夹中官方主题下载地点 
-王魏大神的博客主题王魏博客主题
-1.clong主题从github上clong下来你喜欢的博客主题,然后把Clong下来的文件复制到下图中的vno文件夹下(vno文件夹是我自己创建的,文件夹名称后面需要用到),这个文件夹名称用于设置给第2步的theme字段
-
-2.最后修改hexo/_config.yml文件中的theme字段为vno
-3.修改文件后,需要生成静态网页,然后开启hexo服务,先本地查看效果hexo    
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-05-09T02:19:00.000Z" class="post-list__meta--date date">2016-05-09</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/05/09/博客主题优化/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
+<section id="comment">  
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="2016/07/23/快捷创建及发表博客/" data-title="快捷创建博客及发表博客" data-url="http://xingcheng123.tk/2016/07/23/快捷创建及发表博客/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xinching"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->  
+</section>  
   
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/05/08/十分钟搞定自己的Github博客/" title="link to post.title">十分钟搞定自己的Github博客</a></h2>
-      <p class="excerpt">
-    
-      第一步:创建Github 域名和空间免费个人博客搭建， 这是一篇小白也能看懂的文章，本文主要针对OS X ，Windows 除了软件安装方式和命令有些区别（装了git bash也一样），其他基本一样。你可能经常会看到类似于这样的博客：
-
-
-
-我们需要先在github上搭建一个远程仓库,这个仓库就是以后别人访问我们博客的地方
-
-1. 创建Github 域名和空间1.1注册首先你需要注册一个Github账号，已有的可以下翻去1.2 创建仓库，注意github的username，这会影响到你的域名，你
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-05-08T13:22:10.000Z" class="post-list__meta--date date">2016-05-08</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/05/08/十分钟搞定自己的Github博客/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
-
-
-  <nav class="pagination" role="navigation">
-    
-      <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/#blog">Prev</a>
-    
-    
-  </nav>
-
-
-</div>
-
-
 
             <footer class="footer">
     <span class="footer__copyright">
