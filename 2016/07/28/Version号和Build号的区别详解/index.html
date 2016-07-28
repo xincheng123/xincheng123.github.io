@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>半墨雨萧年 | 以梦为马，莫负韶华！</title>
+    <title>Version号和Build号的区别详解 | 半墨雨萧年</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="半墨雨萧年 | 以梦为马，莫负韶华！">
+    <meta name="twitter:title" content="Version号和Build号的区别详解 | 半墨雨萧年">
     <meta name="twitter:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="半墨雨萧年 | 以梦为马，莫负韶华！">
+    <meta property="og:title" content="Version号和Build号的区别详解 | 半墨雨萧年">
     <meta property="og:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="半墨雨萧年" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://xingcheng123.tk"/>
+    <link rel="canonical" href="http://xingcheng123.tk/2016/07/28/Version号和Build号的区别详解/"/>
 
     
     <link rel="author" href="https://www.google.com/+LenboMa"/>
@@ -148,74 +148,83 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-07-28T08:45:14.000Z" class="post-list__meta--date date">2016-07-28</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">Version号和Build号的区别详解</h1>
+  </header>
+
+  <section class="post">
+    <h3 id="Version和Build图片"><a href="#Version和Build图片" class="headerlink" title="Version和Build图片"></a>Version和Build图片</h3><img src="/2016/07/28/Version号和Build号的区别详解/png1.png" alt="修改配置文件" title="修改配置文件">
+<h4 id="1-Bundle-identifie"><a href="#1-Bundle-identifie" class="headerlink" title="1.Bundle identifie"></a>1.Bundle identifie</h4><ol>
+<li><p>Bundle identifie就是应用的唯一标示符,用于和其他应用做区别的.</p>
+<ul>
+<li><p>在平时测试时,可以任意修改这个标识,只要模拟器或你的真机中没有相同Bundle   identifie的应用就OK啦!所以平时测试时如果提示如下错误,就把Bundle identifier修改一下就可以了.</p>
+</li>
+<li><img src="/2016/07/28/Version号和Build号的区别详解/png2.png" alt="修改配置文件" title="修改配置文件">
+</li>
+<li><p>但是在发布应用时,Bundle  Isdentifier必须和你配置发布证书时绑定的BundleID一致,否则将无法发布应用到苹果应用商城.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="2-version"><a href="#2-version" class="headerlink" title="2.version"></a>2.version</h4><ol>
+<li>versions: 面向用户市场的版本字符串–用户看到的版本号,版本升级时也是比较这个版本号.<br>对<code>4.0.2</code>的解释:<ul>
+<li>第一个整数代表重大修改的版本，如实现新的功能或重大变化的修订。</li>
+<li>第二个整数表示的修订，实现较突出的特点。</li>
+<li>第三个整数代表维护版本。</li>
+</ul>
+</li>
+</ol>
+<h4 id="3-bundle"><a href="#3-bundle" class="headerlink" title="3.bundle"></a>3.bundle</h4><ol>
+<li>Bundle:是我们在团队开发中内部使用的，只有我们自己可以看到。<ul>
+<li>比如团队打算发布version版本为1.0版本的时候，会发布很多build版本供测试或QA团队进行测试，你发布了很多build，因为一直在修改着代码，因此当你收到一条bug信息时候，你怎么知道是那个build引起的问题呢，这时候build版本号的优点就可以体现出来了</li>
+</ul>
+</li>
+</ol>
+<h3 id="在info-plist文件中也可以修改这三个参数"><a href="#在info-plist文件中也可以修改这三个参数" class="headerlink" title="在info.plist文件中也可以修改这三个参数"></a>在info.plist文件中也可以修改这三个参数</h3><img src="/2016/07/28/Version号和Build号的区别详解/png3.png" alt="修改配置文件" title="修改配置文件">
+<ul>
+<li>Version在plist文件中的key是“CFBundleShortVersionString”，和AppStore上的版本号保持一致;</li>
+<li>Build在plist中的key是“CFBundleVersion”，代表build的版本号，该值每次build之后都应该增加1。</li>
+<li>InfoDictionary  version在plist中的key是”CFBundleInfoDictionaryVersion”是这个info.plist文件格式的版本,这个版本不需要我们关心.</li>
+</ul>
+<p><code>重点</code>:<br><code>应用是否升级,对比的是version，而不是build，通过下面的代码来获取version</code></p>
+<pre><code>• 获取当前的 version:
+    ○ NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@&quot;CFBundleShortVersionString&quot;];
+
+• 获取当前 build号:
+    ○ NSString * bundle = [[[NSBundle mainBundle]    infoDictionary]   objectForKey:@&quot;CFBundleVersion&quot;];
+
+或者:
+    ○ NSString * bundle = [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString*)kCFBundleVersionKey];
+</code></pre>
+  </section>
+
+</article>
+
   
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/07/02/initwithcoder和initwithframe的区别精解/" title="link to post.title">以init加载视图方法总结</a></h2>
-      <p class="excerpt">
-    
-      一:initWithCoder和initWithFrame的区别精解从nib/story中加载对象实例时，init：或initWithFrame：都不会调用。而是调用initWithCoder:
-1. initWithFrame方法是什么？initWithFrame方法用来初始化并返回一个新的视图对象,根据指定的CGRect（尺寸）。当然，其他UI对象，也有initWithFrame方法，但是，我们以UIView为例，来搞清楚initWithFrame方法。
-2.什么时候用initWithFra
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-07-02T10:15:00.000Z" class="post-list__meta--date date">2016-07-02</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/07/02/initwithcoder和initwithframe的区别精解/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
+<section id="comment">  
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="2016/07/28/Version号和Build号的区别详解/" data-title="Version号和Build号的区别详解" data-url="http://xingcheng123.tk/2016/07/28/Version号和Build号的区别详解/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xinching"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->  
+</section>  
   
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/05/09/博客主题优化/" title="link to post.title">博客主题优化</a></h2>
-      <p class="excerpt">
-    
-      第一步:从官网下载主题或者直接clong主题到下面的文件夹中官方主题下载地点 
-王魏大神的博客主题王魏博客主题
-1.clong主题从github上clong下来你喜欢的博客主题,然后把Clong下来的文件复制到下图中的vno文件夹下(vno文件夹是我自己创建的,文件夹名称后面需要用到),这个文件夹名称用于设置给第2步的theme字段
-
-2.最后修改hexo/_config.yml文件中的theme字段为vno
-3.修改文件后,需要生成静态网页,然后开启hexo服务,先本地查看效果hexo    
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-05-09T02:19:00.000Z" class="post-list__meta--date date">2016-05-09</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/05/09/博客主题优化/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/05/08/十分钟搞定自己的Github博客/" title="link to post.title">十分钟搞定自己的Github博客</a></h2>
-      <p class="excerpt">
-    
-      第一步:创建Github 域名和空间免费个人博客搭建， 这是一篇小白也能看懂的文章，本文主要针对OS X ，Windows 除了软件安装方式和命令有些区别（装了git bash也一样），其他基本一样。你可能经常会看到类似于这样的博客：
-
-
-
-我们需要先在github上搭建一个远程仓库,这个仓库就是以后别人访问我们博客的地方
-
-1. 创建Github 域名和空间1.1注册首先你需要注册一个Github账号，已有的可以下翻去1.2 创建仓库，注意github的username，这会影响到你的域名，你
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-05-08T13:22:10.000Z" class="post-list__meta--date date">2016-05-08</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/05/08/十分钟搞定自己的Github博客/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
-
-
-  <nav class="pagination" role="navigation">
-    
-      <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/#blog">Prev</a>
-    
-    
-  </nav>
-
-
-</div>
-
-
 
             <footer class="footer">
     <span class="footer__copyright">
