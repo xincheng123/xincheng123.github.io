@@ -52,7 +52,7 @@
     </span>
 
     
-<header class="panel-cover " style="background-image: url(/images/background-cover.jpg)">
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
   <div class="panel-main">
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
@@ -154,78 +154,33 @@
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/07/09/获取沙盒各个目录路径/" title="link to post.title">获取沙盒各个目录路径</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2016/08/01/hexo博客集成Disqus评论模块/" title="link to post.title">hexo博客集成Disqus评论模块</a></h2>
       <p class="excerpt">
     
-      一:获取沙盒根路径NSLog(@&amp;quot;根目录  %@&amp;quot;,NSHomeDirectory());
-打印结果:(最后无/)
-/Users/zhaoxincheng/Library/Developer/CoreSimulator/Devices/34714E55-93D6-42AF-AA12-261B183A3845/data/Containers/Data/Application/AB97C817-64EC-4146-87A8-BF129DFDB42D
-获取的是沙盒下面这个目录的路径
+      首先是登陆Disqus官网注册账号,为您的网站配置Disqus网址:
+注册然后登陆:
+
+点击图中的Home
+
+点击Add Disqus  To  Site选项
+
+把界面拉到最下面,点击GET  STARTED按钮
+
+出现如下创键界面,按图中要求输入内容,点击Create  Site按钮创键
+点击跳过这个界面
+点击最上面的Settings按钮
+把你刚刚创键的Disqus网站和你的博客关联起来
+
+至此,Disqus服务器上的网站创建完毕也关联完毕,其中需要记住,你的Disqus网站的short_na
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2016-07-09T12:06:03.000Z" class="post-list__meta--date date">2016-07-09</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/07/09/获取沙盒各个目录路径/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/07/02/initwithcoder和initwithframe的区别精解/" title="link to post.title">以init加载视图方法总结</a></h2>
-      <p class="excerpt">
-    
-      一:initWithCoder和initWithFrame的区别精解从nib/story中加载对象实例时，init：或initWithFrame：都不会调用。而是调用initWithCoder:
-1. initWithFrame方法是什么？initWithFrame方法用来初始化并返回一个新的视图对象,根据指定的CGRect（尺寸）。当然，其他UI对象，也有initWithFrame方法，但是，我们以UIView为例，来搞清楚initWithFrame方法。
-2.什么时候用initWithFra
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-07-02T10:15:00.000Z" class="post-list__meta--date date">2016-07-02</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/07/02/initwithcoder和initwithframe的区别精解/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/05/09/博客主题优化/" title="link to post.title">博客主题优化</a></h2>
-      <p class="excerpt">
-    
-      第一步:从官网下载主题或者直接clong主题到下面的文件夹中官方主题下载地点 
-王魏大神的博客主题王魏博客主题
-1.clong主题从github上clong下来你喜欢的博客主题,然后把Clong下来的文件复制到下图中的vno文件夹下(vno文件夹是我自己创建的,文件夹名称后面需要用到),这个文件夹名称用于设置给第2步的theme字段
-
-2.最后修改hexo/_config.yml文件中的theme字段为vno
-3.修改文件后,需要生成静态网页,然后开启hexo服务,先本地查看效果hexo    
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-05-09T02:19:00.000Z" class="post-list__meta--date date">2016-05-09</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/05/09/博客主题优化/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/05/08/十分钟搞定自己的Github博客/" title="link to post.title">十分钟搞定自己的Github博客</a></h2>
-      <p class="excerpt">
-    
-      第一步:创建Github 域名和空间免费个人博客搭建， 这是一篇小白也能看懂的文章，本文主要针对OS X ，Windows 除了软件安装方式和命令有些区别（装了git bash也一样），其他基本一样。你可能经常会看到类似于这样的博客：
-
-
-
-我们需要先在github上搭建一个远程仓库,这个仓库就是以后别人访问我们博客的地方
-
-1. 创建Github 域名和空间1.1注册首先你需要注册一个Github账号，已有的可以下翻去1.2 创建仓库，注意github的username，这会影响到你的域名，你
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-05-08T13:22:10.000Z" class="post-list__meta--date date">2016-05-08</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/05/08/十分钟搞定自己的Github博客/">继续阅读</a></div>
+      <div class="post-list__meta"><time datetime="2016-08-01T12:40:10.000Z" class="post-list__meta--date date">2016-08-01</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/01/hexo博客集成Disqus评论模块/">继续阅读</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
   </ol>
 
-
-  <nav class="pagination" role="navigation">
-    
-      <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/#blog">Prev</a>
-    
-    
-  </nav>
 
 
 </div>
