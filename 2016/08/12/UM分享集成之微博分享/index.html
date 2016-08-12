@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>UM分享集成之微博分享 | 半墨雨萧年</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="UM分享集成之微博分享 | 半墨雨萧年">
+    <meta name="twitter:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="UM分享集成之微博分享 | 半墨雨萧年">
+    <meta property="og:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
+
+    
+    <meta name="author" content="赵新成">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+    <link rel="icon" href="/images/favicon.png">
+    
+
+    <meta name="generator" content="hexo"/>
+    
+    <link rel="alternate" type="application/rss+xml" title="半墨雨萧年" href="/atom.xml">
+    
+
+    <link rel="canonical" href="http://xingcheng123.tk/2016/08/12/UM分享集成之微博分享/"/>
+
+    
+    <link rel="author" href="https://www.google.com/+LenboMa"/>
+    
+</head>
+
+<body class="home-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 半墨雨萧年 的主页"><img src="/images/logo2.jpg" width="80" alt="半墨雨萧年 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for 半墨雨萧年">半墨雨萧年</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">以梦为马，莫负韶华！</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">嗨，我是赵新成，一名来自中国的 iOS 开发者。现居北京。正在修行，探求创意之源。</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/projects">项目作品</a></li>
+            
+              <li class="navigation__item"><a href="/aboutme">关于我</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/u/3820143749" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/xincheng123" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+  <li class="navigation__item">
+    <a href="https://www.google.com/+LenboMa" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google+</span>
+    </a>
+  </li>
+
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+  <li class="navigation__item">
+    <a href="/atom.xml" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-green"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-08-12T09:35:59.000Z" class="post-list__meta--date date">2016-08-12</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+    </div>
+    <h1 class="post-title">UM分享集成之微博分享</h1>
+  </header>
+
+  <section class="post">
+    <h3 id="1-注册友盟账号"><a href="#1-注册友盟账号" class="headerlink" title="1.注册友盟账号"></a>1.注册友盟账号</h3><p>登陆<a href="http://umeng.com" target="_blank" rel="external">友盟官网</a>，在<a href="http://umeng.com/apps" target="_blank" rel="external">我的产品</a>页面添加新应用，然后获取到友盟为我们的App生成的Appkey。</p>
+<h3 id="2-申请微博第三方账号"><a href="#2-申请微博第三方账号" class="headerlink" title="2.申请微博第三方账号"></a>2.申请微博第三方账号</h3><p>进行分享、授权操作需要在第三方平台创建应用并提交审核<br>登录<a href="http://open.weibo.com" target="_blank" rel="external">新浪微博开放平台</a>,填写相关应用信息并上传icon图片。注意修改安全域名为<code>sns.whalecloud.com</code> 同时设置授权回调页为<code>http://sns.whalecloud.com/sina2/callback</code> </p>
+<p>安全域名设置在应用信息–&gt;基本信息，具体位置参考下图</p>
+<img src="/2016/08/12/UM分享集成之微博分享/png1.png" alt="图片描述" title="图片描述">
+<p>授权回调页、取消授权回调页设置在应用信息–&gt;高级信息，具体位置参考下图</p>
+<img src="/2016/08/12/UM分享集成之微博分享/png2.png" alt="图片描述" title="图片描述">
+<p><code>安全域名的修改需要二次审核通过才生效，授权回调页修改即时生效</code></p>
+<p>3.绑定第三方账号到友盟后台</p>
+<p>目前需要在友盟后台绑定的第三方账号为：</p>
+<ul>
+<li>新浪微博</li>
+<li>腾讯微博</li>
+<li>人人网</li>
+<li>豆瓣</li>
+<li>Qzone</li>
+</ul>
+<p>其余平台如</p>
+<ul>
+<li>微信</li>
+<li>QQ</li>
+</ul>
+<p><code>直接在代码中设置即可</code></p>
+<p>友盟后台<a href="http://umeng.com/apps" target="_blank" rel="external">绑定地址:</a></p>
+<p>登录友盟网站-&gt;左上角选择你们的产品-&gt;组件-&gt;社会化组件-&gt;设置</p>
+<img src="/2016/08/12/UM分享集成之微博分享/png3.png" alt="图片描述" title="图片描述">
+<h3 id="4-适配iOS9系统"><a href="#4-适配iOS9系统" class="headerlink" title="4.适配iOS9系统"></a>4.适配iOS9系统</h3><p>如果果你的应用使用了如SSO授权登录或<code>跳转分享</code>功能，在iOS9下就需要增加一个可跳转的白名单，指定对应跳转App的URL Scheme，否则将在第三方平台判断是否跳转时用到的canOpenURL时返回NO，进而只进行webview授权或授权/分享失败。<br>在info.plist增加：</p>
+<pre><code>&lt;key&gt;LSApplicationQueriesSchemes&lt;/key&gt; 
+&lt;array&gt;
+
+&lt;!-- 新浪微博 URL Scheme 白名单--&gt; 
+&lt;string&gt;sinaweibohd&lt;/string&gt; 
+&lt;string&gt;sinaweibo&lt;/string&gt;
+&lt;string&gt;sinaweibosso&lt;/string&gt;
+&lt;string&gt;weibosdk&lt;/string&gt; 
+&lt;string&gt;weibosdk2.5&lt;/string&gt;
+
+&lt;/array&gt;
+</code></pre><p>另外如果你的应用刚刚创建,还没有添加联网许可,则还需要在info.plist中增加允许应用进行网络请求的键值对(这个键值对一般项目都已经添加过了,如果没有添加就无法进行网络访问,已添加过可忽略此步骤)</p>
+<pre><code>&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+ &lt;dict&gt;
+   &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;
+    &lt;true/&gt;
+ &lt;/dict&gt;
+</code></pre><blockquote>
+<p>UM官方提示:<br><code>由于苹果审核政策需求，建议大家对未安装客户端平台进行隐藏，在设置QQ、微信AppID之后调用下面的方法，[UMSocialConfig hiddenNotInstallPlatforms:@[UMShareToQQ, UMShareToQzone, UMShareToWechatSession, UMShareToWechatTimeline]]; 这个接口只对默认分享面板平台有隐藏功能，自定义分享面板或登录按钮需要自己处理 友盟分享sdk5.2.1已经兼容ipv6，请大家升级sdk，避免无法通过APPstore审核</code></p>
+</blockquote>
+<h3 id="5-下载并安装SDK"><a href="#5-下载并安装SDK" class="headerlink" title="5.下载并安装SDK"></a>5.下载并安装SDK</h3><p><code>安装SDK可以采用CocoaPods和手动下载两种方式，选择下面其中一种来集成即可</code></p>
+<h5 id="5-1-使用CocoaPods集成"><a href="#5-1-使用CocoaPods集成" class="headerlink" title="5.1  使用CocoaPods集成"></a>5.1  使用CocoaPods集成</h5><p>在Podfile中增加一行，内容如下：</p>
+<pre><code>pod &apos;UMengSocialCOM&apos;, &apos;~&gt; 5.2.1&apos;
+</code></pre><p>然后执行安装即可</p>
+<pre><code>pod install
+</code></pre><p>如果是1.0版本以上pod需要增加下面的配置</p>
+<pre><code>target:工程名称 do
+platform :ios,&apos;5.0&apos;
+pod &apos;UMengSocialCOM&apos;, &apos;~&gt; 5.2.1&apos;
+end
+</code></pre><h5 id="5-2-1-手动集成SDK"><a href="#5-2-1-手动集成SDK" class="headerlink" title="5.2.1  手动集成SDK"></a>5.2.1  手动集成SDK</h5><p>下载 <a href="http://dev.umeng.com/social/ios/sdk-download" target="_blank" rel="external">最新版SDK</a><br>解压SDK压缩包，将形如UMSocial_Sdk_x.x.x的文件夹拖入工程目录：</p>
+<img src="/2016/08/12/UM分享集成之微博分享/png4.png" alt="图片描述" title="图片描述">
+<p>然后把下面这个微博第三方SDK也拖入项目:</p>
+<img src="/2016/08/12/UM分享集成之微博分享/png5.png" alt="图片描述" title="图片描述">
+<p>确认勾选了<code>Copy items to destination&#39;s group folder</code>选项，并选择你要添加到的Target:</p>
+<img src="/2016/08/12/UM分享集成之微博分享/png6.png" alt="图片描述" title="图片描述">
+<h5 id="5-2-2-添加系统需要的framework"><a href="#5-2-2-添加系统需要的framework" class="headerlink" title="5.2.2 添加系统需要的framework"></a>5.2.2 添加系统需要的framework</h5><ul>
+<li>添加SDK后需要手动添加系统库SystemConfiguration.framework</li>
+<li>在Build  Setting—&gt;搜索other linker flags增加-ObjC 选项,如下图:（实现新浪微博必须完成的步骤）</li>
+</ul>
+<img src="/2016/08/12/UM分享集成之微博分享/png7.png" alt="图片描述" title="图片描述">
+<ul>
+<li><p>添加SDK依赖的系统库文件</p>
+<ul>
+<li><p>在Xcode中打开工程配置文件，选择“summary”一栏。在“summary”中选择“Linked Frameworks and Libraries”一栏，点击“+”图标添加下面九个库文件，分别是</p>
+<ul>
+<li>Security.framework</li>
+<li>libiconv.dylib</li>
+<li>SystemConfiguration.framework</li>
+<li>CoreGraphics.Framework</li>
+<li>libsqlite3.dylib</li>
+<li>CoreTelephony.framework</li>
+<li>libstdc++.dylib</li>
+<li>libz.dylib</li>
+<li>ImageIO.framework</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>添加完毕后如图:</p>
+<img src="/2016/08/12/UM分享集成之微博分享/png8.png" alt="图片描述" title="图片描述">
+<h5 id="5-2-3-设置友盟appkey"><a href="#5-2-3-设置友盟appkey" class="headerlink" title="5.2.3 设置友盟appkey"></a>5.2.3 设置友盟appkey</h5><ul>
+<li>使用你之前已经在友盟注册应用获得的Appkey。 </li>
+<li>如果你尚未在友盟注册账号，需要先注册，注册之后登录你的账号，点击添加新应用，完成新应用填写之后，将进入应用管理页面。在该页面就能得到Appkey。</li>
+<li>在代码中设置你的友盟Appkey，在 AppDelegate文件内设置你的AppKey：</li>
+<li>导入头文件 #import “UMSocial.h”</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> #import &quot;UMSocial.h&quot;- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions&#123;</span><br><span class="line">	// 注册应用程序 设置app的友盟appKey，此appKey从友盟网站获取</span><br><span class="line">    [UMSocialData setAppKey:@&quot;507fcab25270157b37000010&quot;];&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="5-2-4-配置第三方平台APPID及scheme"><a href="#5-2-4-配置第三方平台APPID及scheme" class="headerlink" title="5.2.4 配置第三方平台APPID及scheme"></a>5.2.4 配置第三方平台APPID及scheme</h5><p>在AppDelegate中导入头文件#import “UMSocialSinaSSOHandler.h”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</span><br><span class="line">    </span><br><span class="line">    // 注册应用程序 设置app的友盟appKey，此appKey从友盟网站获取</span><br><span class="line"></span><br><span class="line">    [UMSocialData setAppKey:@&quot;571c8275e0f55a6af4001d4f&quot;];</span><br><span class="line">    </span><br><span class="line">    //打开新浪微博的SSO开关，设置新浪微博回调地址，这里必须要和你在新浪微博后台设置的回调地址一致。</span><br><span class="line">    //需要 #import &quot;UMSocialSinaSSOHandler.h&quot;</span><br><span class="line">    /**</span><br><span class="line">     设置使用最新新浪微博SDK来处理SSO授权(通过客户端设置appkey进行访问)</span><br><span class="line">     </span><br><span class="line">     @param appKey 新浪App Key</span><br><span class="line">     @param appSecret 新浪App Secret</span><br><span class="line">     @param redirectURL 回调URL</span><br><span class="line">     </span><br><span class="line">     */</span><br><span class="line">    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@&quot;1404004035&quot;</span><br><span class="line">                                              secret:@&quot;3cebf79741180adb27b885ea02fd3391&quot;</span><br><span class="line">                                         RedirectURL:@&quot;http://sns.whalecloud.com/sina2/callback&quot;];</span><br><span class="line">    </span><br><span class="line">    return YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="5-2-5-配置系统回调"><a href="#5-2-5-配置系统回调" class="headerlink" title="5.2.5  配置系统回调"></a>5.2.5  配置系统回调</h5><p>在APPdelegate.m中增加下面的系统回调配置，注意如果同时使用微信支付、支付宝等其他需要改写回调代理的SDK，请在if分支下做区分，否则会影响 分享、登录的回调</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark 用于处理应用间跳转的(分享完成后跳转回当前应用是调用的方法)</span><br><span class="line">- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation</span><br><span class="line">&#123;</span><br><span class="line">    BOOL result = [UMSocialSnsService handleOpenURL:url];</span><br><span class="line">    </span><br><span class="line">    if (result == FALSE) &#123;</span><br><span class="line">        //调用其他SDK，例如支付宝SDK等</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="5-2-6-配置URL-scheme"><a href="#5-2-6-配置URL-scheme" class="headerlink" title="5.2.6  配置URL scheme"></a>5.2.6  配置URL scheme</h5><p>在你的工程设置项,targets 一栏下,选中自己的 target,在 Info-&gt;URL Types 中添加 URL Schemes。如果使用的是Xcode3或更低版本，则需要在plist文件中添加。获取各个平台appkey或者appid的方法可以参考分享详细文档绑定各个平台部分，各个平台的url scheme格式如下表：</p>
+<img src="/2016/08/12/UM分享集成之微博分享/png9.png" alt="图片描述" title="图片描述">
+<p><code>配置微博Scheme</code></p>
+<img src="/2016/08/12/UM分享集成之微博分享/png10.png" alt="图片描述" title="图片描述">
+<h5 id="5-2-7-在点击微博分享按钮的控制器中导入友盟头文件"><a href="#5-2-7-在点击微博分享按钮的控制器中导入友盟头文件" class="headerlink" title="5.2.7  在点击微博分享按钮的控制器中导入友盟头文件"></a>5.2.7  在点击微博分享按钮的控制器中导入友盟头文件</h5><pre><code>#import &quot;UMSocial.h&quot;
+</code></pre><p>方式一:使用默认分享接口(适合愿意使用默认分享界面)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark - 点击按钮分享到微博</span><br><span class="line">- (IBAction)shareSina &#123;</span><br><span class="line">    </span><br><span class="line">    /**----------------------------------默认分享接口--------------------------------</span><br><span class="line">     弹出一个分享列表的类似iOS6的UIActivityViewController控件</span><br><span class="line">     </span><br><span class="line">     @param controller 在该controller弹出分享列表的UIActionSheet</span><br><span class="line">     @param appKey 友盟appKey</span><br><span class="line">     @param shareText  分享编辑页面的内嵌文字</span><br><span class="line">     @param shareImage 分享内嵌图片,用户可以在编辑页面删除</span><br><span class="line">     @param snsNames 你要分享到的sns平台类型，该NSArray值是`UMSocialSnsPlatformManager.h`定义的平台名的字符串常量，有UMShareToSina，UMShareToTencent，UMShareToRenren，UMShareToDouban，UMShareToQzone，UMShareToEmail，UMShareToSms等</span><br><span class="line">     @param delegate 实现分享完成后的回调对象，如果不关注分享完成的状态，可以设为nil</span><br><span class="line">     */</span><br><span class="line">    </span><br><span class="line">    //注意：分享到微信好友、微信朋友圈、微信收藏、QQ空间、QQ好友、来往好友、来往朋友圈、易信好友、易信朋友圈、Facebook、Twitter、Instagram等平台需要参考各自的集成方法</span><br><span class="line"></span><br><span class="line">    [UMSocialSnsService presentSnsIconSheetView:self</span><br><span class="line">                                         appKey:@&quot;571c8275e0f55a6af4001d4f&quot;</span><br><span class="line">                                      shareText:@&quot;世界上有10种人, 一种是懂二进制的, 一种是不懂二进制的&quot;</span><br><span class="line">                                     shareImage:[UIImage imageNamed:@&quot;UMS_sina_icon&quot;]</span><br><span class="line">                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,nil]</span><br><span class="line">                                       delegate:nil];</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方式二:使用自定义界面接口(适合自定义分享界面)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark - 点击按钮分享到微博</span><br><span class="line">- (IBAction)shareSina &#123;</span><br><span class="line">       </span><br><span class="line">    /*---------------------自定义界面接口----------------------*/</span><br><span class="line">    //需要自定义面板样式的开发者需要自己绘制UI，在对应的分享按钮中调用此接口</span><br><span class="line">    [UMSocialData defaultData].extConfig.title = @&quot;分享的title&quot;;</span><br><span class="line">    //分享的网络内嵌图片资源</span><br><span class="line">    UMSocialUrlResource *urlResource = [[UMSocialUrlResource alloc] initWithSnsResourceType:UMSocialUrlResourceTypeImage url:</span><br><span class="line">                                        @&quot;http://www.baidu.com/img/bdlogo.gif&quot;];</span><br><span class="line">    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToSina] content:@&quot;分享内嵌文字&quot; image:nil location:nil urlResource:urlResource presentedController:self completion:^(UMSocialResponseEntity *shareResponse)&#123;</span><br><span class="line">        if (shareResponse.responseCode == UMSResponseCodeSuccess) &#123;</span><br><span class="line">            NSLog(@&quot;分享成功！&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+  </section>
+
+</article>
+
+  
+<section id="comment">  
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="2016/08/12/UM分享集成之微博分享/" data-title="UM分享集成之微博分享" data-url="http://xingcheng123.tk/2016/08/12/UM分享集成之微博分享/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xinching"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->  
+</section>  
+  
+
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@Longbo Ma</a> 创建,
+        使用<a href="https://github.com/lenbo-ma/hexo-theme-vno">hexo-theme-vno</a>主题,
+        修改自<a href="http://github.com/onevcat/vno" target="_blank">Vno</a>
+    </span>
+</footer>
+
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+
+     
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-42596364-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
