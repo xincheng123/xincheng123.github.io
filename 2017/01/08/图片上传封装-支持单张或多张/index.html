@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Version号和Build号的区别详解 | 半墨雨萧年</title>
+    <title>图片上传封装-支持单张或多张 | 半墨雨萧年</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Version号和Build号的区别详解 | 半墨雨萧年">
+    <meta name="twitter:title" content="图片上传封装-支持单张或多张 | 半墨雨萧年">
     <meta name="twitter:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Version号和Build号的区别详解 | 半墨雨萧年">
+    <meta property="og:title" content="图片上传封装-支持单张或多张 | 半墨雨萧年">
     <meta property="og:description" content="喜仙剑，爱红楼，迷火影，一半电影控，一半古风梦。在iOS开发道路上潜心修行">
 
     
@@ -37,7 +37,7 @@
     <link rel="alternate" type="application/rss+xml" title="半墨雨萧年" href="/atom.xml">
     
 
-    <link rel="canonical" href="http://xingcheng123.tk/2016/07/28/Version号和Build号的区别详解/"/>
+    <link rel="canonical" href="http://xingcheng123.tk/2017/01/08/图片上传封装-支持单张或多张/"/>
 
     
     <link rel="author" href="https://www.google.com/+LenboMa"/>
@@ -152,55 +152,122 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2016-07-28T08:45:14.000Z" class="post-list__meta--date date">2016-07-28</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
+      <time datetime="2017-01-08T11:40:28.000Z" class="post-list__meta--date date">2017-01-08</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
     </div>
-    <h1 class="post-title">Version号和Build号的区别详解</h1>
+    <h1 class="post-title">图片上传封装-支持单张或多张</h1>
   </header>
 
   <section class="post">
-    <h3 id="Version和Build图片"><a href="#Version和Build图片" class="headerlink" title="Version和Build图片"></a>Version和Build图片</h3><img src="/2016/07/28/Version号和Build号的区别详解/png1.png" alt="修改配置文件" title="修改配置文件">
-<h4 id="1-Bundle-identifie"><a href="#1-Bundle-identifie" class="headerlink" title="1.Bundle identifie"></a>1.Bundle identifie</h4><ol>
-<li><p>Bundle identifie就是应用的唯一标示符,用于和其他应用做区别的.</p>
-<ul>
-<li><p>在平时测试时,可以任意修改这个标识,只要模拟器或你的真机中没有相同Bundle   identifie的应用就OK啦!所以平时测试时如果提示如下错误,就把Bundle identifier修改一下就可以了.</p>
-</li>
-<li><img src="/2016/07/28/Version号和Build号的区别详解/png2.png" alt="修改配置文件" title="修改配置文件">
-</li>
-<li><p>但是在发布应用时,Bundle  Isdentifier必须和你配置发布证书时绑定的BundleID一致,否则将无法发布应用到苹果应用商城.</p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="2-version"><a href="#2-version" class="headerlink" title="2.version"></a>2.version</h4><ol>
-<li>versions: 面向用户市场的版本字符串–用户看到的版本号,版本升级时也是比较这个版本号.<br>对<code>4.0.2</code>的解释:<ul>
-<li>第一个整数代表重大修改的版本，如实现新的功能或重大变化的修订。</li>
-<li>第二个整数表示的修订，实现较突出的特点。</li>
-<li>第三个整数代表维护版本。</li>
-</ul>
-</li>
-</ol>
-<h4 id="3-bundle"><a href="#3-bundle" class="headerlink" title="3.bundle"></a>3.bundle</h4><ol>
-<li>Bundle:是我们在团队开发中内部使用的，只有我们自己可以看到。<ul>
-<li>比如团队打算发布version版本为1.0版本的时候，会发布很多build版本供测试或QA团队进行测试，你发布了很多build，因为一直在修改着代码，因此当你收到一条bug信息时候，你怎么知道是那个build引起的问题呢，这时候build版本号的优点就可以体现出来了</li>
-</ul>
-</li>
-</ol>
-<h3 id="在info-plist文件中也可以修改这三个参数"><a href="#在info-plist文件中也可以修改这三个参数" class="headerlink" title="在info.plist文件中也可以修改这三个参数"></a>在info.plist文件中也可以修改这三个参数</h3><img src="/2016/07/28/Version号和Build号的区别详解/png3.png" alt="修改配置文件" title="修改配置文件">
-<ul>
-<li>Version在plist文件中的key是“CFBundleShortVersionString”，和AppStore上的版本号保持一致;</li>
-<li>Build在plist中的key是“CFBundleVersion”，代表build的版本号，该值每次build之后都应该增加1。</li>
-<li>InfoDictionary  version在plist中的key是”CFBundleInfoDictionaryVersion”是这个info.plist文件格式的版本,这个版本不需要我们关心.</li>
-</ul>
-<p><code>重点</code>:<br><code>应用是否升级,对比的是version，而不是build，通过下面的代码来获取version</code></p>
-<pre><code>• 获取当前的 version:
-    ○ NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@&quot;CFBundleShortVersionString&quot;];
+    <h2 id="0-图片上传使用场景"><a href="#0-图片上传使用场景" class="headerlink" title="0.图片上传使用场景"></a>0.图片上传使用场景</h2><p>在平时项目中,图片上传的功能应该大家都遇到过,最近公司项目里有个评论模块,需要实现单张或多张图片上传的功能,这里总结了一下,废话不多说,直接上代码.</p>
+<h3 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h3><blockquote>
+<p>图片上传需要进行网络请求,我这里就直接使用AFN</p>
+</blockquote>
+<h3 id="2-代码"><a href="#2-代码" class="headerlink" title="2.代码"></a>2.代码</h3><p>.h文件放出一个接口,只要需要使用图片上传,直接调用这个接口即可,具体说明已有详细的注释</p>
+<pre><code>    /**
+ *  上传带图片的内容，允许多张图片上传（URL）POST
+ *
+  *  @param url                 网络请求地址
+ *  @param images              要上传的图片数组（注意数组内容需是图片）
+ *  @param parameter           图片数组对应的参数(后台规定传的字段)
+ *  @param parameters          其他参数字典
+ *  @param ratio               图片的压缩比例（0.0~1.0之间）
+ *  @param succeedBlock        成功的回调
+ *  @param failedBlock         失败的回调
+ *  @param uploadProgressBlock 上传进度的回调
+ */
++(void)startMultiPartUploadTaskWithURL:(NSString *)url
+                           imagesArray:(NSArray *)images
+                     parameterOfimages:(NSString *)parameter
+                        parametersDict:(NSDictionary *)parameters
+                      compressionRatio:(float)ratio
+                          succeedBlock:(void(^)(id response, NSError *error ))succeedBlock
+                           failedBlock:(void(^)(id response, NSError *error ))failedBlock
+                   uploadProgressBlock:(void(^)(float uploadPercent,long long totalBytesWritten,long long totalBytesExpectedToWrite))uploadProgressBlock;
 
-• 获取当前 build号:
-    ○ NSString * bundle = [[[NSBundle mainBundle]    infoDictionary]   objectForKey:@&quot;CFBundleVersion&quot;];
 
-或者:
-    ○ NSString * bundle = [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString*)kCFBundleVersionKey];
-</code></pre>
+//自定义请求头
++(AFHTTPRequestSerializer *)customHeader;
+</code></pre><p>.m文件实现网络请求功能</p>
+<pre><code>#import &quot;AFNetworking.h&quot;    
+//实现：
++(void)startMultiPartUploadTaskWithURL:(NSString *)url
+                       imagesArray:(NSArray *)images
+                 parameterOfimages:(NSString *)parameter
+                    parametersDict:(NSDictionary *)parameters
+                  compressionRatio:(float)ratio
+                      succeedBlock:(void(^)(id response, NSError *error ))succeedBlock
+                       failedBlock:(void(^)(id response, NSError *error ))failedBlock
+               uploadProgressBlock:(void (^)(float, long long, long long))uploadProgressBlock{
+
+//创建请求管理者
+AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//超时时长,默认是60秒,设置为120秒
+manager.requestSerializer.timeoutInterval = 120.f;
+//2.设置请求头
+manager.requestSerializer = [self customHeader];
+// 设置请求格式
+//3.开始post请求
+[manager POST:url parameters:parameters constructingBodyWithBlock:^(id&lt;AFMultipartFormData&gt; formData) {
+
+    if (images.count &gt; 0) {
+
+        //根据当前系统时间生成图片名称
+        NSDate *date = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@&quot;yyyyMMddHHmmss&quot;];
+        NSString *dateString = [formatter stringFromDate:date];
+
+
+        [images enumerateObjectsUsingBlock:^(UIImage *image, NSUInteger idx, BOOL * _Nonnull stop) {
+
+            NSData *imageData;
+
+            //调整存储大小
+            imageData = UIImageJPEGRepresentation(image,ratio);
+            CGFloat sizeOriginKB = imageData.length / 1024.0;
+            CGFloat resizeRate = ratio/2.0;
+            //限制上传图片大小在250Kb之内
+            while (sizeOriginKB &gt; 250 &amp;&amp; resizeRate &gt; 0.01) {
+                imageData = UIImageJPEGRepresentation(image,resizeRate);
+                sizeOriginKB = imageData.length / 1024.0;
+                resizeRate = resizeRate/2.0;
+            }
+                NSLog(@&quot;%tu(kB)&quot;,imageData.length/1024);
+
+                //拼接图片数据
+                [formData appendPartWithFileData:imageData name:parameter fileName:[NSString stringWithFormat:@&quot;%@%@.jpeg&quot;,dateString,@(idx)] mimeType:@&quot;image/jpeg&quot;];               
+           }];
+    }
+
+
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        //成功的回调
+        succeedBlock(responseObject,nil);
+
+
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@&quot;上传失败%@&quot;,error);
+        failedBlock(nil,error);
+    }];
+}
+
+//自定义请求头(这个请求头根据公司后台要求决定是否需要传)
++(AFHTTPRequestSerializer *)customHeader{
+
+AFHTTPRequestSerializer * requestSerializer = [AFHTTPRequestSerializer serializer];
+
+//传token
+NSString *tokenStr = [LoginModel getLoginUserID];
+NSString *apiToken = [LLUserDefaults getValueWithKey:Api_Token];
+NSString *token = @&quot;&quot;
+
+//添加请求头
+[requestSerializer setValue:token forHTTPHeaderField:@&quot;key&quot;];
+
+return requestSerializer;
+}
+</code></pre><p><a href="https://github.com/xincheng123/UploadImageTools.git" target="_blank" rel="external">Github工具类源码下载</a></p>
+
   </section>
 
 </article>
@@ -208,7 +275,7 @@
   
 <section id="comment">  
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="2016/07/28/Version号和Build号的区别详解/" data-title="Version号和Build号的区别详解" data-url="http://xingcheng123.tk/2016/07/28/Version号和Build号的区别详解/"></div>
+  <div class="ds-thread" data-thread-key="2017/01/08/图片上传封装-支持单张或多张/" data-title="图片上传封装-支持单张或多张" data-url="http://xingcheng123.tk/2017/01/08/图片上传封装-支持单张或多张/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
